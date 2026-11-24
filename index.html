@@ -1,0 +1,3894 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مذكرة النماذج الاسترشادية للغة العربية — الصف الثالث الإعدادي</title>
+
+  <!-- Open Graph Meta Tags for Clean Facebook & Social Media Sharing -->
+  <meta property="og:title" content="مذكرة النماذج الاسترشادية للغة العربية — الصف الثالث الإعدادي" />
+  <meta property="og:description" content="خطة مذاكرة تفاعلية شاملة ومجانية لطلاب الصف الثالث الإعدادي: قراءة، نصوص، نحو، تعبير وخط، اختبار تفاعلي شامل، وبطاقات مراجعة ملونة بدون أسئلة مكررة." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Mirza & Harmattan (Maghrebi/Andalusian Calligraphic Headings), Amiri (Passages & Poetry), IBM Plex Sans Arabic (Crisp UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Harmattan:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Mirza:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons CDN (Zero Emojis Anywhere in UI) -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#FAF7F0',
+            parchment: '#FBF8F1',
+            surface: '#FFFFFF',
+            borderWarm: '#E6DFD1',
+            sandGold: '#CBB99B',
+            ink: '#1A2351',
+            bodyInk: '#1F2937',
+            slateCalm: '#596377',
+            accent: '#2457D6',
+            accentSoft: '#EDF3FF',
+            success: '#15803D',
+            successSoft: '#ECFDF5',
+            amberAccent: '#B45309',
+            amberSoft: '#FEF5DC',
+            danger: '#B91C1C',
+            dangerSoft: '#FEF2F2',
+          },
+          fontFamily: {
+            heading: ['"MaghrebiCustom"', '"Mirza"', '"Harmattan"', '"Amiri"', 'serif'],
+            sans: ['"IBM Plex Sans Arabic"', 'sans-serif'],
+            serifAr: ['"Amiri"', 'serif'],
+          },
+          boxShadow: {
+            calm: '0 2px 12px rgba(26, 35, 81, 0.045)',
+            calmHover: '0 8px 22px rgba(26, 35, 81, 0.085)',
+            cardFloat: '0 18px 36px rgba(26, 35, 81, 0.13)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Optional Local Custom Maghrebi Font (auto-loads if user drops maghrebi.woff2 or maghrebi.ttf next to index.html) */
+    @font-face {
+      font-family: 'MaghrebiCustom';
+      src: url('./maghrebi.woff2') format('woff2'),
+           url('./maghrebi.ttf') format('truetype');
+      font-weight: 400 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* Base Typography & Calm Ivory Ergonomics */
+    html {
+      scroll-behavior: smooth;
+      background-color: #FAF7F0;
+      color: #1A2351;
+    }
+
+    body {
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      background-color: #FAF7F0;
+      color: #1F2937;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Maghrebi / Andalusian Calligraphic Heading Style */
+    .font-heading {
+      font-family: 'MaghrebiCustom', 'Mirza', 'Harmattan', 'Amiri', serif;
+      line-height: 1.42;
+      font-feature-settings: "liga" 1, "calt" 1;
+    }
+
+    .reading-passage {
+      font-family: 'Amiri', serif;
+      line-height: 2.08;
+      font-size: 1.24rem;
+    }
+
+    .poetry-line {
+      font-family: 'Amiri', serif;
+      line-height: 2.08;
+      font-size: 1.3rem;
+    }
+
+    /* Hide scrollbar on horizontal filter strips while retaining swipe scroll */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* ==================== DEDICATED ORNAMENTAL NOTEBOOK BANNER ==================== */
+    .notebook-title-frame {
+      background-color: #FBF8F1;
+      border: 1.5px solid #CBB99B;
+      box-shadow: 0 3px 16px rgba(26, 35, 81, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    .notebook-title-inner {
+      border: 1px solid #D9C9AE;
+      position: relative;
+    }
+
+    /* ==================== PROFESSIONAL 3D FLIP CARDS & SHEEN SWEEP ==================== */
+    .flip-scene {
+      perspective: 1200px;
+      position: relative;
+    }
+
+    .flip-lift-wrap {
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    @keyframes cardLiftBounce {
+      0%   { transform: translateY(0) scale(1); }
+      45%  { transform: translateY(-9px) scale(1.028); }
+      100% { transform: translateY(0) scale(1); }
+    }
+
+    .flip-lift-wrap.is-lifting {
+      animation: cardLiftBounce 0.68s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .flip-card {
+      display: grid;
+      width: 100%;
+      min-height: 334px;
+      transform-style: preserve-3d;
+      transition: transform 0.68s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+      cursor: pointer;
+      border-radius: 1.125rem;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      will-change: transform;
+    }
+
+    .flip-card.grid-flip-card {
+      min-height: 274px;
+    }
+
+    .flip-card.is-flipped {
+      transform: rotateY(180deg) scale(1.015);
+    }
+
+    .flip-lift-wrap.is-lifting .flip-card {
+      box-shadow: 0 20px 38px rgba(26, 35, 81, 0.13);
+    }
+
+    .flip-face {
+      grid-area: 1 / 1;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 1.125rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .flip-front {
+      transform: rotateY(0deg);
+    }
+
+    .flip-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Subtle light sheen sweeping across the card during rotation */
+    .flip-face::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        112deg,
+        transparent 22%,
+        rgba(255, 255, 255, 0.48) 48%,
+        transparent 74%
+      );
+      transform: translateX(130%);
+      opacity: 0;
+    }
+
+    @keyframes sheenSweep {
+      0%   { transform: translateX(130%); opacity: 0; }
+      25%  { opacity: 0.9; }
+      100% { transform: translateX(-130%); opacity: 0; }
+    }
+
+    .flip-lift-wrap.is-lifting .flip-face::after {
+      animation: sheenSweep 0.68s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* Layered Colorful Peeking Cards Behind Active Deck Card */
+    .deck-stack-layer {
+      position: absolute;
+      inset: 0;
+      border-radius: 1.125rem;
+      pointer-events: none;
+      transition: transform 0.48s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease;
+    }
+    .deck-stack-1 {
+      transform: translate(-10px, 10px) scale(0.965);
+      z-index: 1;
+    }
+    .deck-stack-2 {
+      transform: translate(-20px, 20px) scale(0.93);
+      z-index: 0;
+    }
+    .deck-stage-active {
+      position: relative;
+      z-index: 2;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .deck-nudge .deck-stack-1 {
+      transform: translate(-14px, 14px) scale(0.955);
+    }
+    .deck-nudge .deck-stack-2 {
+      transform: translate(-26px, 25px) scale(0.915);
+    }
+
+    /* Directional Card Slide Transitions */
+    @keyframes slideOutNext {
+      from { opacity: 1; transform: translateX(0) rotate(0deg); }
+      to   { opacity: 0; transform: translateX(-36px) rotate(-1.4deg); }
+    }
+    @keyframes slideOutPrev {
+      from { opacity: 1; transform: translateX(0) rotate(0deg); }
+      to   { opacity: 0; transform: translateX(36px) rotate(1.4deg); }
+    }
+    @keyframes slideInNext {
+      from { opacity: 0; transform: translateX(34px) scale(0.97); }
+      to   { opacity: 1; transform: translateX(0) scale(1); }
+    }
+    @keyframes slideInPrev {
+      from { opacity: 0; transform: translateX(-34px) scale(0.97); }
+      to   { opacity: 1; transform: translateX(0) scale(1); }
+    }
+
+    .anim-slide-out-next { animation: slideOutNext 0.17s ease-in forwards; }
+    .anim-slide-out-prev { animation: slideOutPrev 0.17s ease-in forwards; }
+    .anim-slide-in-next  { animation: slideInNext 0.28s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .anim-slide-in-prev  { animation: slideInPrev 0.28s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+
+    /* Smooth view entrance */
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .view-enter {
+      animation: fadeSlideIn 0.24s ease-out;
+    }
+
+    /* Accessible Focus Rings */
+    button:focus-visible, textarea:focus-visible, [role="button"]:focus-visible {
+      outline: 2px solid #2457D6;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="bg-paper text-bodyInk min-h-screen pb-24 md:pb-12 selection:bg-accentSoft selection:text-accent">
+
+  <!-- ==================== STICKY TOP HEADER (~64px) ==================== -->
+  <header class="sticky top-0 z-40 h-16 bg-surface/95 backdrop-blur-sm border-b border-borderWarm">
+    <div class="max-w-[780px] mx-auto h-full px-4 flex items-center justify-between gap-2.5">
+      <!-- Compact Notebook Title in Maghrebi Calligraphic Font -->
+      <button onclick="switchView('plan')" class="flex items-center gap-2.5 text-right group min-w-0">
+        <span class="w-9 h-9 rounded-xl bg-accentSoft text-accent flex items-center justify-center shrink-0 border border-accent/15">
+          <i class="ph ph-book-open-text text-xl"></i>
+        </span>
+        <span class="font-heading text-lg sm:text-xl font-bold text-ink truncate">
+          مذكرة النماذج الاسترشادية — ٣ إعدادي
+        </span>
+      </button>
+
+      <!-- Progress Bar & Audio Mute Toggle -->
+      <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
+        <div class="flex items-center gap-2">
+          <div class="w-14 sm:w-24 h-2 bg-borderWarm/80 rounded-full overflow-hidden" aria-label="نسبة الإنجاز الكلية">
+            <div id="header-progress-bar" class="h-full bg-accent rounded-full transition-all duration-300" style="width: 0%"></div>
+          </div>
+          <span id="header-progress-text" class="text-xs font-semibold text-slateCalm tabular-nums w-8 text-left">0%</span>
+        </div>
+
+        <button
+          id="mute-toggle-btn"
+          onclick="toggleMute()"
+          class="w-10 h-10 rounded-xl border border-borderWarm bg-paper hover:bg-accentSoft hover:text-accent text-slateCalm flex items-center justify-center transition-colors"
+          aria-label="تفعيل أو كتم المؤثرات الصوتية"
+          title="المؤثرات الصوتية"
+        >
+          <i id="mute-icon" class="ph ph-speaker-high text-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== DESKTOP SEGMENTED NAVIGATION ==================== -->
+  <nav class="hidden md:block bg-paper/95 backdrop-blur-sm border-b border-borderWarm/80 sticky top-16 z-30">
+    <div class="max-w-[780px] mx-auto px-4 py-2.5">
+      <div class="grid grid-cols-4 gap-1.5 p-1 bg-surface border border-borderWarm rounded-2xl shadow-calm" role="tablist">
+        <button data-nav="plan" onclick="switchView('plan')" class="desktop-nav-btn flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-sm font-semibold transition-colors">
+          <i class="ph ph-map-trifold text-base"></i>
+          <span>خطة المذاكرة</span>
+        </button>
+        <button data-nav="station" onclick="switchView('station')" class="desktop-nav-btn flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-sm font-semibold transition-colors">
+          <i class="ph ph-notebook text-base"></i>
+          <span>المحطة الحالية</span>
+        </button>
+        <button data-nav="quiz" onclick="switchView('quiz')" class="desktop-nav-btn flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-sm font-semibold transition-colors">
+          <i class="ph ph-exam text-base"></i>
+          <span>الاختبار الشامل</span>
+        </button>
+        <button data-nav="review" onclick="switchView('review')" class="desktop-nav-btn flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-sm font-semibold transition-colors relative">
+          <i class="ph ph-cards text-base"></i>
+          <span>بطاقات المراجعة</span>
+          <span id="desktop-bookmark-dot" class="hidden w-2 h-2 rounded-full bg-amberAccent"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== MAIN CONTENT COLUMN ==================== -->
+  <main id="app-root" class="max-w-[780px] mx-auto px-4 pt-5 sm:pt-6">
+    <!-- Dynamic view content rendered via JavaScript -->
+  </main>
+
+  <!-- ==================== MOBILE FIXED BOTTOM NAVIGATION ==================== -->
+  <nav class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-surface border-t border-borderWarm shadow-calm" aria-label="التنقل الرئيسي">
+    <div class="grid grid-cols-4 h-16 max-w-[780px] mx-auto">
+      <button data-nav="plan" onclick="switchView('plan')" class="mobile-nav-btn flex flex-col items-center justify-center gap-1 min-h-[48px] text-xs font-medium transition-colors">
+        <i class="ph ph-map-trifold text-xl"></i>
+        <span>الخطة</span>
+      </button>
+      <button data-nav="station" onclick="switchView('station')" class="mobile-nav-btn flex flex-col items-center justify-center gap-1 min-h-[48px] text-xs font-medium transition-colors">
+        <i class="ph ph-notebook text-xl"></i>
+        <span>المحطة</span>
+      </button>
+      <button data-nav="quiz" onclick="switchView('quiz')" class="mobile-nav-btn flex flex-col items-center justify-center gap-1 min-h-[48px] text-xs font-medium transition-colors">
+        <i class="ph ph-exam text-xl"></i>
+        <span>الاختبار</span>
+      </button>
+      <button data-nav="review" onclick="switchView('review')" class="mobile-nav-btn flex flex-col items-center justify-center gap-1 min-h-[48px] text-xs font-medium transition-colors relative">
+        <i class="ph ph-cards text-xl"></i>
+        <span>المراجعة</span>
+        <span id="mobile-bookmark-dot" class="hidden absolute top-2 left-1/2 -translate-x-4 w-2 h-2 rounded-full bg-amberAccent"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== SUBTLE TOAST FEEDBACK CONTAINER ==================== -->
+  <div id="toast-container" class="fixed bottom-20 md:bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none transition-all duration-300 opacity-0 translate-y-2">
+    <div id="toast-box" class="bg-ink text-surface text-sm font-medium px-4 py-2.5 rounded-xl shadow-calmHover flex items-center gap-2 whitespace-nowrap">
+      <i id="toast-icon" class="ph ph-check-circle text-base"></i>
+      <span id="toast-message"></span>
+    </div>
+  </div>
+
+  <!-- ==================== APPLICATION DATA & LOGIC ==================== -->
+  <script>
+    /* =========================================================================
+       1. COMPLETE DEDUPLICATED STUDY DATA (MODELS 1 & 2 — 48 UNIQUE QUESTIONS)
+       ========================================================================= */
+    const STATIONS = [
+      {
+        id: 1,
+        day: 1,
+        dayTitle: 'اليوم الأول: القراءة وبناء الفهم',
+        shortTitle: 'التنمية والمستقبل',
+        title: 'القراءة — التنمية والمستقبل',
+        subtitle: 'موضوعا «مستقبل مصر في الزراعة» و«حرفتك بين يديك»',
+        branch: 'القراءة',
+        icon: 'ph-plant',
+        sections: [
+          {
+            label: 'الفقرة الأولى — من موضوع «مستقبل مصر في الزراعة» (نموذج ١)',
+            type: 'passage',
+            text: '«لا يقتصر أثر هذا المشروع العملاق على الجانب الاقتصادي فحسب، بل يمتد ليعيد رسم الخريطة السكانية لمصر؛ فحيثما وُجدت الزراعة والآلة، وُجد العمران ودبّت الحياة. لقد مهّدت هذه المشروعات الطريق لإقامة مجتمعات عمرانية جديدة متكاملة، ومصانع لتعبئة المنتجات الزراعية وتغليفها، وشبكات طرق حديثة تربط هذه الواحات الجديدة بموانئ التصدير وأسواق الاستهلاك؛ لتخفيف التكدس السكاني في الوادي والدلتا، وفتح رئة جديدة تتنفس منها الأجيال القادمة. إن هذا المشروع يجسد نموذجًا حيًا للإرادة الوطنية التي تحوّل رمال الصحراء الصفراء إلى واحات خضراء تنبض بالإنتاج والعطاء؛ فليس الأمر مجرد مشروع زراعي بل هو رسالة أمل تؤكد أن مصر تمضي بثبات نحو مستقبل أكثر أمنًا واستقرارًا، مستندة إلى سواعد أبنائها، ورؤية طموح تضع الوطن في صدارة الدول.»',
+            questions: [
+              {
+                id: 's1_q1',
+                type: 'mcq',
+                branch: 'القراءة',
+                source: 'نموذج ١ — مستقبل مصر في الزراعة',
+                prompt: 'مرادف كلمة «التكدّس» الواردة في سياق الفقرة:',
+                options: ['الانتشار', 'الاقتراب', 'الازدحام', 'الالتقاء'],
+                correctIndex: 2,
+                explanation: 'التكدّس السكاني يعني الازدحام وتراكم السكان في الوادي والدلتا.'
+              },
+              {
+                id: 's1_q2',
+                type: 'essay',
+                tag: 'مقالي',
+                branch: 'القراءة',
+                source: 'نموذج ١ — مستقبل مصر في الزراعة',
+                prompt: 'ما الرسالة التي يؤكدها مشروع «مستقبل مصر للتنمية الزراعية»؟',
+                modelAnswer: 'يؤكد أن الإرادة الوطنية والعمل الجاد قادران على تحقيق التنمية وبناء مستقبل أكثر أمنًا واستقرارًا لمصر.'
+              },
+              {
+                id: 's1_q3',
+                type: 'essay',
+                tag: 'مقالي',
+                branch: 'القراءة',
+                source: 'نموذج ١ — مستقبل مصر في الزراعة',
+                prompt: 'لماذا ختم الكاتب الموضوع بالحديث عن «الأجيال القادمة» ولم يكتفِ بنتائج المشروع في الحاضر؟',
+                modelAnswer: 'لأن آثار المشروع لا تقتصر على الحاضر، بل تمتد إلى المستقبل، وتسهم في توفير حياة أفضل ورئة جديدة للأجيال القادمة.'
+              },
+              {
+                id: 's1_q4',
+                type: 'essay',
+                tag: 'مقالي',
+                branch: 'القراءة',
+                source: 'نموذج ١ — مستقبل مصر في الزراعة',
+                prompt: '«تُعدّ التنمية الزراعية حجر الأساس للتنمية العمرانية» دلّل على صحة العبارة من خلال فهمك للفقرة.',
+                modelAnswer: 'العبارة صحيحة؛ لأن الزراعة تؤدي إلى إقامة مجتمعات عمرانية جديدة متكاملة، ومصانع لتعبئة المنتجات وتغليفها، وشبكات طرق حديثة، مما يسهم في تحقيق التنمية العمرانية.'
+              }
+            ]
+          },
+          {
+            label: 'الفقرة الثانية — من موضوع «حرفتك بين يديك» (نموذج ٢)',
+            type: 'passage',
+            text: '«واليوم بدأت النظرة المجتمعية للتعليم الفني تتغير تغيرًا ملموسًا؛ فلم تعد العيون تراه أقل شأنًا من التعليم العام؛ وذلك إيمانًا بدوره الحيوي في بناء الاقتصاد، وتوفير فرص العمل، وإنعاش مناخ الاستثمار؛ إذ يمنح التعليم الفني الفرد فرصة حقيقية لبناء مستقبله بيده فيكتسب خبرات مهنية تؤهله للالتحاق بسوق العمل في سن مبكرة، وتمكنه من الاعتماد على نفسه وتحقيق الاستقرار المادي، بل قد يفتح أمامه الباب لإقامة مشروعه الخاص.»',
+            questions: [
+              {
+                id: 's1_q5',
+                type: 'mcq',
+                branch: 'القراءة',
+                source: 'نموذج ٢ — حرفتك بين يديك',
+                prompt: 'ما المراد بكلمة «ملموسًا»؟',
+                options: ['مأمولًا', 'ملحوظًا', 'سريعًا', 'مقبولًا'],
+                correctIndex: 1,
+                explanation: '«تغيرًا ملموسًا» أي ظاهرًا وملحوظًا في الواقع.'
+              },
+              {
+                id: 's1_q6',
+                type: 'essay',
+                tag: 'مقالي',
+                branch: 'القراءة',
+                source: 'نموذج ٢ — حرفتك بين يديك',
+                prompt: 'ما المجالات التي يمكن أن يفيدها التعليم الفني ويعمل على تطويرها؟',
+                modelAnswer: 'يفيد التعليم الفني في بناء الاقتصاد، وتوفير فرص العمل، وإنعاش مناخ الاستثمار.'
+              },
+              {
+                id: 's1_q7',
+                type: 'essay',
+                tag: 'مقالي',
+                branch: 'القراءة',
+                source: 'نموذج ٢ — حرفتك بين يديك',
+                prompt: '«حرفتك بين يديك» اشرح هذا الشعار في ضوء فهمك دور الصانع الماهر في عملية التنمية.',
+                modelAnswer: 'الحرفة تضمن لصاحبها عملًا ورزقًا واستقرارًا ماديًا، والصانع الماهر يسهم في التنمية بإتقان عمله وزيادة الإنتاج وتوفير احتياجات المجتمع وتقليل الاستيراد.'
+              },
+              {
+                id: 's1_q8',
+                type: 'essay',
+                tag: 'مقالي',
+                branch: 'القراءة',
+                source: 'نموذج ٢ — حرفتك بين يديك',
+                prompt: 'للأم دور مهم في اكتشاف مواهب أبنائها. دلّل على صدق هذه العبارة من خلال قصة «توماس إديسون».',
+                modelAnswer: 'عندما فُصل إديسون من المدرسة لم تيأس أمه، بل تولت تعليمه في البيت وشجعته على القراءة والتجريب حتى أصبح مخترعًا عظيمًا.'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 2,
+        day: 1,
+        dayTitle: 'اليوم الأول: القراءة وبناء الفهم',
+        shortTitle: 'أفضل النعم',
+        title: 'القراءة — درس «أفضل النعم»',
+        subtitle: 'الفقرتان الواردتان في النموذجين الأول والثاني',
+        branch: 'القراءة',
+        icon: 'ph-lightbulb',
+        sections: [
+          {
+            label: 'الفقرة الأولى — من درس «أفضل النعم» (نموذج ١)',
+            type: 'passage',
+            text: '«وحين يعتاد الإنسان التفكير السليم، تتجلى أمامه معالم الطريق واضحة جلية، ويصبح قادرًا على إصدار أحكام تتمتع بالموضوعية والحياد، منزّهة عن الهوى والارتجال. فالعقل الواعي كالمصباح الذي يبدد ظلمات الجهل، ويكشف الحقائق التي قد تخفى على غيره؛ وبذلك يصبح الإنسان أكثر قدرة على اتخاذ القرارات السديدة، وبناء آرائه على أسس منطقية قائمة على الفهم والتأمل. وفي المقابل، يبدو التفكير الخطأ غِشاوة تعمي البصيرة؛ حيث ينبهر صاحبه بالمظاهر الخادعة، وينساق وراء الشائعات والمقولات المرسلة دون تمحيص، فتصدر أحكامه مبتسرة، وتتسم مواقفه بالتعصب.»',
+            questions: [
+              {
+                id: 's2_q1',
+                type: 'mcq',
+                branch: 'القراءة',
+                source: 'نموذج ١ — أفضل النعم',
+                prompt: 'مضاد كلمة «تمحيص» الواردة في سياق الفقرة:',
+                options: ['تلخيص', 'سطحية', 'إجمال', 'تعديل'],
+                correctIndex: 1,
+                explanation: 'التمحيص هو التدقيق والفحص العميق للوصول إلى الحقيقة، ومضاده السطحية والتسرع دون تدقيق.'
+              },
+              {
+                id: 's2_q2',
+                type: 'mcq',
+                branch: 'القراءة',
+                source: 'نموذج ١ — أفضل النعم',
+                prompt: 'الفكرة الرئيسة التي تدور حولها الفقرة السابقة:',
+                options: [
+                  'أهمية التعلم في اكتساب الخبرات المتنوعة',
+                  'أهمية الحياد في إصدار الأحكام على الآخرين',
+                  'خطورة الشائعات على المجتمع في العصر الحديث',
+                  'أثر التفكير السليم في بناء شخصية الإنسان وقراراته'
+                ],
+                correctIndex: 3,
+                explanation: 'الفقرة بأكملها تقارن بين أثر التفكير السليم في بناء شخصية الإنسان وقراراته السديدة وبين أثر التفكير الخاطئ.'
+              },
+              {
+                id: 's2_q3',
+                type: 'mcq',
+                branch: 'القراءة',
+                source: 'نموذج ١ — أفضل النعم',
+                prompt: 'ما دلالة وصف الأحكام بكلمة «مبتسرة» في سياق الفقرة؟',
+                options: [
+                  'الإشادة بالأحكام واعتبارها دليلًا على سرعة البديهة',
+                  'التنفير من التسرع في إصدار أحكام ناقصة غير موضوعية',
+                  'بيان قدرة بعض الناس على إصدار أحكام سريعة',
+                  'إثارة فضول القارئ للبحث عن الدوافع وراء إصدار الأحكام'
+                ],
+                correctIndex: 1,
+                explanation: '«مبتسرة» تعني مقطوعة وناقصة لم تنضج، وتوحي بالتنفير من التسرع في الحكم دون فهم أو تمحيص.'
+              },
+              {
+                id: 's2_q4',
+                type: 'essay',
+                tag: 'مقالي',
+                branch: 'القراءة',
+                source: 'نموذج ١ — أفضل النعم',
+                prompt: 'متى يصبح الإنسان قادرًا على إصدار أحكام تتسم بالحياد والموضوعية؟',
+                modelAnswer: 'عندما يعتاد التفكير السليم، ويتجنب الهوى والارتجال.'
+              }
+            ]
+          },
+          {
+            label: 'الفقرة الثانية — من درس «أفضل النعم» (نموذج ٢)',
+            type: 'passage',
+            text: '«ولا يتحقق التفكير السليم إلا بتعويد النفس على التأمل والتعلم المستمر، والحرص على البحث عن الحقيقة من مصادرها الموثوقة، كما ينبغي للإنسان أن يتحلى بروح الحوار وتقبل الرأي الآخر؛ لأن تبادل الفكر يفتح آفاقًا جديدة للفهم. وهكذا يصبح إعمال العقل طريقًا يقود الإنسان إلى المعرفة الرشيدة، ويعينه على بناء حياة قائمة على الوعي والبصيرة.»',
+            questions: [
+              {
+                id: 's2_q5',
+                type: 'mcq',
+                branch: 'القراءة',
+                source: 'نموذج ٢ — أفضل النعم',
+                prompt: 'ما المراد بكلمة «الموثوقة»؟',
+                options: ['المربوطة', 'القوية', 'المعتمدة', 'القريبة'],
+                correctIndex: 2,
+                explanation: 'المصادر الموثوقة هي المصادر المعتمدة الصحيحة التي يُطمأن إلى صدقها.'
+              },
+              {
+                id: 's2_q6',
+                type: 'mcq',
+                branch: 'القراءة',
+                source: 'نموذج ٢ — أفضل النعم',
+                prompt: 'أكمل: العقل الواعي (........) ظلمات الجهل.',
+                options: ['يبدد', 'يظهر', 'يبرز', 'يغطي'],
+                correctIndex: 0,
+                explanation: 'يبدد أي يزيل ويمحو ظلمات الجهل، كما ورد في الدرس.'
+              },
+              {
+                id: 's2_q7',
+                type: 'mcq',
+                branch: 'القراءة',
+                source: 'نموذج ٢ — أفضل النعم',
+                prompt: 'ما علاقة «لأن تبادل الفكر يفتح آفاقًا جديدة للفهم» بما قبلها؟',
+                options: ['توضيح', 'تفصيل', 'تعليل', 'نتيجة'],
+                correctIndex: 2,
+                explanation: 'الجملة تبدأ بـ«لأن» وتبين السبب في ضرورة التحلي بروح الحوار وتقبل الرأي الآخر، فهي تعليل.'
+              },
+              {
+                id: 's2_q8',
+                type: 'essay',
+                tag: 'مقالي',
+                branch: 'القراءة',
+                source: 'نموذج ٢ — أفضل النعم',
+                prompt: 'كيف يسهم إعمال العقل في بناء حياة الفرد؟',
+                modelAnswer: 'يقود الإنسان إلى المعرفة الرشيدة، ويعينه على بناء حياة قائمة على الوعي والبصيرة.'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 3,
+        day: 2,
+        dayTitle: 'اليوم الثاني: النصوص الأدبية',
+        shortTitle: 'نص الصداقة',
+        title: 'النصوص النثرية — نص «الصداقة»',
+        subtitle: 'للدكتور شوقي ضيف — فقرتا النموذجين الأول والثاني',
+        branch: 'النصوص',
+        icon: 'ph-handshake',
+        sections: [
+          {
+            label: 'الفقرة الأولى — من نص «الصداقة» (نموذج ١)',
+            type: 'passage',
+            text: '«من النعم على الإنسان في حياته أن يكون له صديق وفي، أو أصدقاء أوفياء يخلصون له في مسيرته بدنياه؛ أصدقاء يأتمنهم على أسراره، وإذا طلب إليهم نصيحة أسدوها إليه، وكذلك إذا طلب مشورة أدوها على خير وجه. ومهما كان الإنسان حصيفًا في رأيه، بعيد النظر في شئونه؛ فلا يستغني عمن يستشيرهم من خلصائه في بعض أمره، وحَرِيٌّ أن يكونوا من الإخلاص له بحيث يُسدون له النصيحة السديدة غير مدخرين رأيًا سليمًا ولا رُشدًا قويمًا.»',
+            questions: [
+              {
+                id: 's3_q1',
+                type: 'essay',
+                tag: 'مقالي',
+                branch: 'النصوص',
+                source: 'نموذج ١ — نص الصداقة',
+                prompt: 'لماذا لا يستغني الإنسان — مهما كان حصيفًا — عن استشارة خلصائه؟',
+                modelAnswer: 'لأن الإنسان مهما بلغ من رجاحة العقل وحسن الرأي يحتاج إلى الاستفادة من آراء خلصائه للوصول إلى الرأي السديد وحسن اتخاذ القرار.'
+              },
+              {
+                id: 's3_q2',
+                type: 'mcq',
+                branch: 'النصوص',
+                source: 'نموذج ١ — نص الصداقة',
+                prompt: 'مفرد كلمة «خلصائه» الواردة في الفقرة:',
+                options: ['خالص', 'خليص', 'مخلص', 'خلاصة'],
+                correctIndex: 1,
+                explanation: 'مفرد «خُلَصاء» هو «خَليص» على وزن فُعَلاء / فَعيل (مثل: كُرَماء / كَريم).'
+              },
+              {
+                id: 's3_q3',
+                type: 'mcq',
+                branch: 'النصوص',
+                source: 'نموذج ١ — نص الصداقة',
+                prompt: 'أي المواقف التالية يُعد تطبيقًا أكثر نضجًا لفكرة الكاتب في الفقرة السابقة؟',
+                options: [
+                  'أن يستشير الإنسان الآخرين في كل أمر دون أن يفكر بنفسه',
+                  'أن يرفض الإنسان آراء الآخرين حفاظًا على استقلال شخصيته',
+                  'أن يفكر الإنسان في الأمر ثم يستفيد من مشورة المخلصين',
+                  'أن يطلب الإنسان المشورة ممن يوافقون ميوله فقط'
+                ],
+                correctIndex: 2,
+                explanation: 'الجمع بين إعمال العقل الشخصي أولًا ثم الاستعانة بمشورة الأصدقاء الأوفياء هو قمة النضج الفكري.'
+              },
+              {
+                id: 's3_q4',
+                type: 'mcq',
+                branch: 'النصوص',
+                source: 'نموذج ١ — نص الصداقة',
+                prompt: 'قول الكاتب «غير مدخرين رأيًا سليمًا ولا رشدًا قويمًا» يؤكد حرص الأصدقاء على:',
+                options: [
+                  'تقديم آرائهم وإن اختلفت في صوابها',
+                  'تقديم النصيحة والرأي السديد دون بخل',
+                  'الاحتفاظ بآرائهم حتى لا يسيئوا لمشاعر صديقهم',
+                  'توجيه صديقهم لما يوافق رغباته فقط'
+                ],
+                correctIndex: 1,
+                explanation: 'تعبير «غير مدخرين» ينفي البخل والكتمان، مما يؤكد إخلاصهم وبذلهم أقصى ما لديهم من نصح.'
+              }
+            ]
+          },
+          {
+            label: 'الفقرة الثانية — من نص «الصداقة» (نموذج ٢)',
+            type: 'passage',
+            text: '«والصديق الوفي لا من يخلص لك النصح عند الحاجة فحسب، بل أيضًا من يسعفك في الشدة، ويساعدك في العسرة، ومن تجده دائمًا بجوارك يأخذ بيدك، وينجدك إن لزمتك النجدة غير مقصر في أداء حق لك، بل إنه ليجد فيما يؤديه من حق متاعًا لا يفوقه متاع. وكما يحفظ لك حضورك يحفظ غيبتك، بل إذا غبت عن مجلسه كان أشد لك حفظًا وصيانة، فهو دائمًا أمين عليك، ووفي لك في الضراء وفاءه في السراء.»',
+            questions: [
+              {
+                id: 's3_q5',
+                type: 'essay',
+                tag: 'مقالي',
+                branch: 'النصوص',
+                source: 'نموذج ٢ — نص الصداقة',
+                prompt: 'هات من النص ما يدل على أن الصديق المخلص دائم التوجيه لصديقه.',
+                modelAnswer: '«من يخلص لك النصح» و«من تجده دائمًا بجوارك يأخذ بيدك».'
+              },
+              {
+                id: 's3_q6',
+                type: 'mcq',
+                branch: 'النصوص',
+                source: 'نموذج ٢ — نص الصداقة',
+                prompt: 'ما مضاد كلمة «يسعفك»؟',
+                options: ['يهينك', 'يضعفك', 'يخذلك', 'يهملك'],
+                correctIndex: 2,
+                explanation: 'يسعفك تعني يعينك وينجدك، ومضادها يخذلك ويتخلى عنك.'
+              },
+              {
+                id: 's3_q7',
+                type: 'mcq',
+                branch: 'النصوص',
+                source: 'نموذج ٢ — نص الصداقة',
+                prompt: 'ماذا يجب على الصديق تجاه صديقه (وفق نص الصداقة)؟',
+                options: [
+                  'أن يجادله في رقة ولطف',
+                  'أن يعترف بفضله مرارًا وتكرارًا',
+                  'ينصحه عند الحاجة فحسب',
+                  'يقف بجواره في العسر لا في اليسر'
+                ],
+                correctIndex: 0,
+                explanation: 'في نص الصداقة يبتعد الصديق عن الجدال العقيم، وإذا جادل جادل في رقة ولطف؛ بينما بقية الخيارات تخالف النص (فالصديق لا يكتفي بالنصح عند الحاجة فحسب، ويقف في السراء والضراء معًا).'
+              },
+              {
+                id: 's3_q8',
+                type: 'mcq',
+                branch: 'النصوص',
+                source: 'نموذج ٢ — نص الصداقة',
+                prompt: 'ما العبارة الدالة على «المؤازرة والمساندة» كما فهمت من النص؟',
+                options: [
+                  '«يكافئك على ما تقدم إليه من أفضال»',
+                  '«يسعفك في الشدة ويساعدك في العسر»',
+                  '«لا يدخل معه في مراء أو جدال»',
+                  '«أصدقاء يأتمنهم على أسراره»'
+                ],
+                correctIndex: 1,
+                explanation: 'الإسعاف في الشدة والمساعدة في العسر هما التعبير المباشر عن المؤازرة والمساندة وقت الضيق.'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 4,
+        day: 2,
+        dayTitle: 'اليوم الثاني: النصوص الأدبية',
+        shortTitle: 'الشعر والمجد',
+        title: 'النصوص الشعرية — العقل وصناعة المجد',
+        subtitle: 'نصا «تاج الفضائل» و«اصنع بيدك مجدك»',
+        branch: 'النصوص',
+        icon: 'ph-feather',
+        sections: [
+          {
+            label: 'النص الأول — من نص «تاج الفضائل» (نموذج ١)',
+            type: 'poem',
+            verses: [
+              ['يَزِينُ الفَتَى فِي النَّاسِ صِحَّةُ عَقْلِهِ', 'وَإِنْ كَانَ مَحْظُورًا عَلَيْهِ مَكَاسِبُهْ'],
+              ['يَعِيشُ الفَتَى فِي النَّاسِ بِالعَقْلِ إِنَّهُ', 'عَلَى العَقْلِ يَجْرِي عِلْمُهُ وَتَجَارِبُهْ'],
+              ['إِذَا أَكْمَلَ الرَّحْمَنُ لِلْمَرْءِ عَقْلَهُ', 'فَقَدْ كَمُلَتْ أَخْلَاقُهُ وَمَآرِبُهْ']
+            ],
+            questions: [
+              {
+                id: 's4_q1',
+                type: 'essay',
+                tag: 'مقالي',
+                branch: 'النصوص',
+                source: 'نموذج ١ — تاج الفضائل',
+                prompt: 'ربط الشاعر بين اكتمال عقل المرء وصلاح سلوكه الاجتماعي وأخلاقه. وضّح ذلك.',
+                modelAnswer: 'لأن اكتمال العقل يؤدي إلى اكتمال الأخلاق وحسن السلوك، ويجعل الإنسان أكثر قدرة على التعامل السليم مع الناس وتحقيق مقاصده.'
+              },
+              {
+                id: 's4_q2',
+                type: 'mcq',
+                branch: 'النصوص',
+                source: 'نموذج ١ — تاج الفضائل',
+                prompt: 'معنى كلمة «مآربه» الواردة في الأبيات:',
+                options: ['علومه', 'تجاربه', 'حاجاته', 'أمواله'],
+                correctIndex: 2,
+                explanation: '«المآرب» جمع مأربة، ومعناها الحاجات والمقاصد والمطالب.'
+              },
+              {
+                id: 's4_q3',
+                type: 'mcq',
+                branch: 'النصوص',
+                source: 'نموذج ١ — تاج الفضائل',
+                prompt: 'الركيزة الأساسية التي يجري عليها علم الإنسان وتجاربه هي:',
+                options: [
+                  'كثرة القراءة والاطلاع',
+                  'الترحال والسفر خارج البلاد',
+                  'توجيهات الآباء والأجداد',
+                  'العقل الواعي المتأمل'
+                ],
+                correctIndex: 3,
+                explanation: 'كما في البيت الثاني «على العقل يجري علمه وتجاربه»، فالعقل هو الركيزة والأساس.'
+              },
+              {
+                id: 's4_q4',
+                type: 'mcq',
+                branch: 'النصوص',
+                source: 'نموذج ١ — تاج الفضائل',
+                prompt: 'الجمال في قول الشاعر «يزين الفتى في الناس صحة عقله» تصوير حيث صوّر:',
+                options: [
+                  'صحة العقل بفضيلة تحقق مآربه',
+                  'العقل السليم بنعمة يعطيها الله لعباده',
+                  'العقل السليم بالزينة التي تُجمّل الإنسان',
+                  'الفتى بإنسان يكتسب المحبة بمظهره'
+                ],
+                correctIndex: 2,
+                explanation: 'صوّر الشاعر العقل السليم بالزينة والتاج الذي يجمّل صاحبه ويرفع قدره بين الناس.'
+              }
+            ]
+          },
+          {
+            label: 'النص الثاني — من نص «اصنع بيدك مجدك» للشاعر معروف الرصافي (نموذج ٢)',
+            type: 'poem',
+            verses: [
+              ['فَوَجِّهْ وِجْهَةَ عَزْمِكَ نَحْوَ آتٍ', 'وَلَا تَلْتَفِتْ إِلَى الْمَاضِينَ جِيدًا'],
+              ['وَهَلْ - إِنْ كَانَ حَاضِرُنَا شَقِيًّا -', 'نَسُودُ بِكَوْنِ مَاضِينَا سَعِيدًا؟'],
+              ['وَأَحْسِنْ فِي بِنَائِكَ كُلَّ مَجْدٍ', 'طَرِيفٍ، وَاتْرُكِ الْمَجْدَ التَّلِيدَا']
+            ],
+            questions: [
+              {
+                id: 's4_q5',
+                type: 'essay',
+                tag: 'مقالي',
+                branch: 'النصوص',
+                source: 'نموذج ٢ — اصنع بيدك مجدك',
+                prompt: '«التفاخر بالماضي لا يكفي لصنع المجد» وضّح ذلك من خلال فهمك الأبيات السابقة.',
+                modelAnswer: 'يدعو الشاعر إلى توجيه العزم نحو المستقبل وعدم الالتفات إلى الماضي؛ فالماضي السعيد لا يصنع السيادة لحاضر شقي، وعلى الإنسان أن يبني مجدًا جديدًا بنفسه.'
+              },
+              {
+                id: 's4_q6',
+                type: 'mcq',
+                branch: 'النصوص',
+                source: 'نموذج ٢ — اصنع بيدك مجدك',
+                prompt: 'ما معنى كلمة «التليد»؟',
+                options: ['العظيم المشهور', 'الأصيل الموروث', 'الجديد المصنوع', 'البعيد المجهول'],
+                correctIndex: 1,
+                explanation: 'التليد هو القديم الأصيل الموروث، ومضاده «الطريف» أي الجديد المستحدث.'
+              },
+              {
+                id: 's4_q7',
+                type: 'mcq',
+                branch: 'النصوص',
+                source: 'نموذج ٢ — اصنع بيدك مجدك',
+                prompt: 'ما الغرض من الاستفهام في قوله «وهل - إن كان حاضرنا شقيًا - نسود بكون ماضينا سعيدًا؟»',
+                options: ['السخرية', 'التعظيم', 'النفي', 'التوكيد'],
+                correctIndex: 2,
+                explanation: 'غرضه النفي؛ إذ لا يمكن أن تسود الأمة بحاضر شقي اعتمادًا على ماضٍ سعيد فقط.'
+              },
+              {
+                id: 's4_q8',
+                type: 'mcq',
+                branch: 'النصوص',
+                source: 'نموذج ٢ — اصنع بيدك مجدك',
+                prompt: 'حدّد البيت الذي يتفق مع مقولة «لا يتحقق النجاح في ظل حاضر بائس» (وفق نموذج الإجابة):',
+                options: ['الأول', 'الثاني والثالث', 'الثالث', 'الأول والثالث'],
+                correctIndex: 1,
+                explanation: 'البيت الثاني ينفي السيادة مع الحاضر الشقي، والبيت الثالث يدعو لبناء مجد جديد في الحاضر وترك الاكتفاء بالمجد الموروث.'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 5,
+        day: 3,
+        dayTitle: 'اليوم الثالث: النحو والتعبير والخط',
+        shortTitle: 'النحو والمشتقات',
+        title: 'النحو — المشتقات والإعراب',
+        subtitle: 'قطعتا النحو من النموذجين مع ملخص القواعد الأساسية',
+        branch: 'النحو',
+        icon: 'ph-scales',
+        grammarCheatSheet: [
+          { title: 'الفعل «جعل»', rule: 'ينصب مفعولين أصلهما المبتدأ والخبر (مثل: اجعل مطلعَ اليوم انطلاقًا / تجعل الصعبَ سهلًا).' },
+          { title: 'اسم الفاعل من الناقص', rule: 'تُحذف ياؤه ويعوّض عنها بتنوين الكسر إذا كان نكرة مرفوعة أو مجرورة غير مضافة: «راءٍ» (من رأى)، «مُعْطٍ» (من أعطى).' },
+          { title: 'اسم المفعول', rule: 'من الناقص الواوي (دعا ← يدعو ← مَدْعُوّ بإدغام الواوين)، ومن غير الثلاثي بضم الميم وفتح ما قبل الآخر (خُطِّط ← مُخَطَّط).' },
+          { title: 'صيغ المبالغة', rule: 'أوزانها: فعّال، مِفعال، فَعول، فَعيل، فَعِل. مثل: الدءوب (فَعول)، المِعوان (مِفعال من الفعل الرباعي أعان).' },
+          { title: 'اسم الآلة', rule: 'مشتق قياسي قديم على وزن مِفعَل (مِشرط)، مِفعَلة (مِرآة)، مِفعال (مِفتاح)، وحديث مثل فَعّالة (سَمّاعة).' },
+          { title: 'اسم الزمان والمكان', rule: 'من الأجوف (عاد ← مَعاد على وزن مَفْعَل)، ومن المثال الواوي صحيح الآخر (وعد ← مَوْعِد على وزن مَفْعِل).' }
+        ],
+        sections: [
+          {
+            label: 'الفقرة الأولى — نحو (نموذج ١)',
+            type: 'passage',
+            text: '«إن المتأمل في مرآة الحياة يدرك أن العمل الجاد الدءوب هو أساس النجاح في الحياة، وهو السبيل لبناء مستقبل مشرق مخطط أهدافه، ولأن النجاح غاية لا تُوهب للمتكاسلين بل يجنيها الساعي بعزم والمثابر على أداء واجبه، فاجعل مطلع كل يوم انطلاقًا متجددًا لعمل مثمر.»',
+            questions: [
+              {
+                id: 's5_q1',
+                type: 'mcq',
+                branch: 'النحو',
+                source: 'نموذج ١ — النحو',
+                prompt: 'إعراب كلمة «انطلاقًا» في «فاجعل مطلع كل يوم انطلاقًا»:',
+                options: ['حال منصوبة', 'مفعول به ثانٍ', 'مفعول مطلق', 'مفعول لأجله'],
+                correctIndex: 1,
+                explanation: 'الفعل «اجعل» ينصب مفعولين؛ «مطلع» مفعول به أول و«انطلاقًا» مفعول به ثانٍ منصوب وعلامة نصبه الفتحة.'
+              },
+              {
+                id: 's5_q2',
+                type: 'mcq',
+                branch: 'النحو',
+                source: 'نموذج ١ — النحو',
+                prompt: 'كلمة «مرآة» الواردة في الفقرة السابقة نوعها ووزنها الصرفي:',
+                options: [
+                  'اسم آلة مشتق على وزن مفعال',
+                  'اسم آلة جامد على وزن مفعل',
+                  'اسم آلة مشتق على وزن مِفعلة',
+                  'صيغة مبالغة على وزن مفعال'
+                ],
+                correctIndex: 2,
+                explanation: '«مرآة» اسم آلة مشتق قياسي من الفعل (رأى) على وزن مِفْعَلة (أصلها مِرأية).'
+              },
+              {
+                id: 's5_q3',
+                type: 'mcq',
+                branch: 'النحو',
+                source: 'نموذج ١ — النحو',
+                prompt: 'استخراج اسم مفعول من فعل غير ثلاثي من الفقرة السابقة:',
+                options: [
+                  'مشرق من الفعل (أشرق)',
+                  'مُخَطَّط / مُخَطَّطة من الفعل المبني للمجهول (خُطِّط)',
+                  'مثمر من الفعل (أثمر)',
+                  'مطلع من الفعل (طلع)'
+                ],
+                correctIndex: 1,
+                explanation: '«مُخَطَّط» اسم مفعول من غير الثلاثي (خُطِّطَ) بميم مضمومة وفتح ما قبل الآخر.'
+              },
+              {
+                id: 's5_q4',
+                type: 'mcq',
+                branch: 'النحو',
+                source: 'نموذج ١ — النحو',
+                prompt: 'صيغة المبالغة الواردة في الفقرة السابقة ووزنها الصرفي:',
+                options: [
+                  'الجاد — الفاعل',
+                  'المتأمل — المتفعل',
+                  'الدءوب — الفعول',
+                  'المثابر — المفاعل'
+                ],
+                correctIndex: 2,
+                explanation: '«الدءوب» (من دأب) صيغة مبالغة على وزن «فَعُول» وتدل على كثرة العمل والمواظبة.'
+              },
+              {
+                id: 's5_q5',
+                type: 'mcq',
+                branch: 'النحو',
+                source: 'نموذج ١ — النحو',
+                prompt: '«يرى المؤمن أنوار الحق». عند صياغة اسم فاعل من الفعل (يرى) وإعادة كتابة الجملة صحيحة نحويًا تصبح:',
+                options: [
+                  'المؤمن رائيًا أنوار الحق',
+                  'المؤمن راءٍ أنوار الحق',
+                  'المؤمن مرئي أنوار الحق',
+                  'المؤمن راي أنوار الحق'
+                ],
+                correctIndex: 1,
+                explanation: 'اسم الفاعل من الثلاثي الناقص (رأى) هو «راءٍ»، وتُحذف ياؤه ويعوّض عنها بتنوين الكسر لأنه نكرة مرفوعة (خبر) غير مضافة.'
+              },
+              {
+                id: 's5_q6',
+                type: 'mcq',
+                branch: 'النحو',
+                source: 'نموذج ١ — النحو',
+                prompt: '«وقت الأصيل يعود الفلاحون من حقولهم». عند صياغة اسم زمان من الفعل (يعود) تصبح الجملة:',
+                options: [
+                  'وقت الأصيل عائد الفلاحين من حقولهم',
+                  'وقت الأصيل معود الفلاحين من حقولهم',
+                  'وقت الأصيل مَعاد الفلاحين من حقولهم',
+                  'وقت الأصيل عودة الفلاحين من حقولهم'
+                ],
+                correctIndex: 2,
+                explanation: 'الفعل (عاد - يعود) ثلاثي أجوف معتل الوسط، واسم الزمان منه يأتي على وزن (مَفْعَل): مَعاد.'
+              }
+            ]
+          },
+          {
+            label: 'الفقرة الثانية — نحو (نموذج ٢)',
+            type: 'passage',
+            text: '«ما أجمل أن تحدد أهدافك فتحديد الأهداف هو أحد الأساليب العلمية التي تجعل الصعب سهلًا ويعينك على إنجاز ما يُطلب منك في وقت قياسي، وعليك استشارة ذوي الخبرة حتى تسمو إلى أرقى المنازل، ونحن — المصريين — نقدر العامل المعوان الناس على تحقيق أهدافهم.»',
+            questions: [
+              {
+                id: 's5_q7',
+                type: 'mcq',
+                branch: 'النحو',
+                source: 'نموذج ٢ — النحو',
+                prompt: 'ما إعراب كلمة «سهلًا» في «تجعل الصعب سهلًا»؟',
+                options: ['مفعول به أول', 'مفعول به ثانٍ', 'نعت منصوب', 'حال منصوبة'],
+                correctIndex: 1,
+                explanation: 'الفعل «تجعل» ينصب مفعولين؛ «الصعب» مفعول به أول، و«سهلًا» مفعول به ثانٍ منصوب بالفتحة.'
+              },
+              {
+                id: 's5_q8',
+                type: 'mcq',
+                branch: 'النحو',
+                source: 'نموذج ٢ — النحو',
+                prompt: 'حدّد الفعل الذي اشتُقت منه صيغة المبالغة «المعوان»:',
+                options: ['أعان', 'عان', 'عيّن', 'عوّن'],
+                correctIndex: 0,
+                explanation: '«مِعوان» صيغة مبالغة على وزن مِفعال مشتقة من الفعل الرباعي غير الثلاثي «أعان».'
+              },
+              {
+                id: 's5_q9',
+                type: 'essay',
+                tag: 'تصويب',
+                branch: 'النحو',
+                source: 'نموذج ٢ — النحو',
+                prompt: '«أنت مَدعِيّ إلى حفل التكريم». صوّب الخطأ الوارد في الجملة السابقة.',
+                modelAnswer: '«أنت مَدْعُوّ إلى حفل التكريم» — لأن الفعل «دعا» مضارعه «يدعو» (أصله واو)، فاسم المفعول منه «مَدْعُوّ» بإدغام واو مفعول في لام الكلمة.'
+              },
+              {
+                id: 's5_q10',
+                type: 'essay',
+                tag: 'تحويل',
+                branch: 'النحو',
+                source: 'نموذج ٢ — النحو',
+                prompt: '«الرجل معطاء الناس حقوقهم». حوّل صيغة المبالغة إلى اسم فاعل واكتب الجملة صحيحة.',
+                modelAnswer: '«الرجل مُعْطٍ الناسَ حقوقهم» — اسم الفاعل من «أعطى» هو «مُعطٍ»، حُذفت الياء لأنه اسم منقوص نكرة مرفوعة.'
+              },
+              {
+                id: 's5_q11',
+                type: 'essay',
+                tag: 'إكمال',
+                branch: 'النحو',
+                source: 'نموذج ٢ — النحو',
+                prompt: '«يستخدم الطبيب ...........». أكمل باسم آلة، واذكر نوعه.',
+                modelAnswer: '«يستخدم الطبيب المِشْرَطَ» — اسم آلة مشتق قياسي قديم على وزن «مِفْعَل» (ويصح أيضًا: السَّمَّاعة — مشتق حديث على وزن فَعَّالة).'
+              },
+              {
+                id: 's5_q12',
+                type: 'essay',
+                tag: 'صياغة',
+                branch: 'النحو',
+                source: 'نموذج ٢ — النحو',
+                prompt: 'صُغ من الفعل (وَعَدَ) اسم زمان مرة، واسم مكان مرة أخرى في جملتين من تعبيرك.',
+                modelAnswer: 'اسم زمان: «مَوْعِدُ الامتحان في الصباح». اسم مكان: «مَوْعِدُ اللقاء في النادي». (الوزن: مَفْعِل لأنه فعل مثال واوي صحيح الآخر).'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 6,
+        day: 3,
+        dayTitle: 'اليوم الثالث: النحو والتعبير والخط',
+        shortTitle: 'التعبير والخط',
+        title: 'التعبير والخط والإملاء',
+        subtitle: 'أسئلة فنية + دليل موضوعات التعبير الوظيفي والإبداعي وقواعد الخط',
+        branch: 'التعبير والخط',
+        icon: 'ph-pen-nib',
+        sections: [
+          {
+            label: 'تدريبات الاختيار من متعدد — مهارات التعبير والخط',
+            type: 'questionsOnly',
+            questions: [
+              {
+                id: 's6_q1',
+                type: 'mcq',
+                branch: 'التعبير والخط',
+                source: 'نموذج ١ — التعبير الوظيفي',
+                prompt: 'عند كتابة تقرير صحفي (3 إلى 5 أسطر) عن أهمية الحفاظ على البيئة وإعادة التدوير، أي العبارات التالية أنسب لخاتمة التقرير؟',
+                options: [
+                  'إعادة التدوير موضوع طويل يحتاج إلى قصص خيالية كثيرة ومسلية',
+                  'إن الحفاظ على البيئة وإعادة التدوير ركيزتان أساسيتان لضمان مستقبل مستدام وآمن للأجيال القادمة',
+                  'يجب أن نترك المصانع تعمل دون ضوابط لأن الإنتاج أهم من نظافة البيئة',
+                  'البيئة كلمة جميلة نكتبها في دفاترنا دون حاجة إلى تطبيق عملي'
+                ],
+                correctIndex: 1,
+                explanation: 'التقرير الصحفي يتسم بالدقة والموضوعية والتركيز على الفكرة الأساسية وعناصره (العنوان، المقدمة، جسم التقرير، الخاتمة).'
+              },
+              {
+                id: 's6_q2',
+                type: 'mcq',
+                branch: 'التعبير والخط',
+                source: 'نموذج ١ — التعبير الإبداعي',
+                prompt: 'عند كتابة نص إقناعي (15 إلى 20 سطرًا)، ما العنصر الفني الأهم لإقناع القارئ؟',
+                options: [
+                  'الاعتماد على العاطفة المجردة وتكرار الجمل دون أدلة أو أمثلة واقعية',
+                  'استخدام العامية الدارجة وتجاهل علامات الترقيم وقواعد الإملاء',
+                  'تقديم الحجج المنطقية والأمثلة الواقعية مع الالتزام بعلامات الترقيم وسلامة اللغة',
+                  'الاقتصار على سطرين فقط دون عرض للمقدمة أو الخاتمة'
+                ],
+                correctIndex: 2,
+                explanation: 'النص الإقناعي يقوم على عرض الفكرة مدعومة بالحجج المنطقية والأمثلة الواقعية مع مراعاة قواعد النحو والإملاء وعلامات الترقيم.'
+              },
+              {
+                id: 's6_q3',
+                type: 'mcq',
+                branch: 'التعبير والخط',
+                source: 'نموذج ١ — قواعد الخط',
+                prompt: 'عند كتابة البيت «واصبر فإن الصبر مفتاح الفرج / إن كنت في ضيق فلا تكُ في حرج» بخط النسخ، أي قاعدة تميز خط النسخ؟',
+                options: [
+                  'طمس رؤوس الحروف (الفاء والقاف والواو والميم) دائمًا',
+                  'وضوح الحروف وتشكيلها وتسنين السين والصاد مثل (واصبر - الصبر)',
+                  'كتابة جميع الحروف فوق السطر دون نزول أي حرف تحته',
+                  'عدم وضع النقاط على الحروف والاكتفاء بالشرطات'
+                ],
+                correctIndex: 1,
+                explanation: 'يمتاز خط النسخ بوضوح الحروف وتجويدها وتشكيلها وبقاء أسنان السين والصاد واضحة ونزول بعض الحروف (الراء والجيم...) تحت السطر.'
+              },
+              {
+                id: 's6_q4',
+                type: 'mcq',
+                branch: 'التعبير والخط',
+                source: 'نموذج ١ — قواعد الخط',
+                prompt: 'عند كتابة البيت نفسه بخط الرقعة، أي قاعدة مما يلي صحيحة؟',
+                options: [
+                  'استقرار معظم الحروف على السطر وطمس رؤوس (الفاء، القاف، الميم، الواو)',
+                  'نزول حرف الراء وحرف الواو تحت السطر بمسافة كبيرة',
+                  'الإكثار من الزخارف والتشكيل الكامل على كل حرف',
+                  'تفريق النقطتين في (في - ضيق) وعدم وصلهما بشرطة'
+                ],
+                correctIndex: 0,
+                explanation: 'في خط الرقعة تستقر معظم الحروف على السطر (بما فيها الراء والواو)، وتُطمس رؤوس الفاء والقاف والميم والواو، وتُدمج النقطتان في شرطة.'
+              }
+            ]
+          }
+        ],
+        writingGuides: {
+          functional: {
+            title: 'التعبير الوظيفي (نموذج ١): التقرير الصحفي (3 إلى 5 أسطر)',
+            topic: 'أهمية الحفاظ على البيئة وإعادة التدوير كخطوة أساسية لضمان مستقبل مستدام للأجيال القادمة',
+            blueprint: [
+              { part: 'العنوان الجاذب والمحدد', example: '«إعادة التدوير: جسرنا نحو بيئة آمنة ومستقبل مستدام»' },
+              { part: 'المقدمة (الفكرة العامة)', example: 'شهدت المبادرات البيئية مؤخرًا اهتمامًا متزايدًا بقضية فرز المخلفات وإعادة تدويرها لحماية الموارد الطبيعية.' },
+              { part: 'جسم التقرير (الحقائق والأثر)', example: 'وتؤكد الجهود المجتمعية أن تقليل التلوث وإعادة استخدام الورق والبلاستيك يوفران الطاقة ويحدّان من الأضرار الصحية.' },
+              { part: 'الخاتمة (التوصية)', example: 'إن الحفاظ على البيئة وإعادة التدوير ركيزتان أساسيتان لضمان مستقبل مستدام وآمن للأجيال القادمة.' }
+            ]
+          },
+          persuasiveTopics: [
+            {
+              id: 'topic_1',
+              source: 'نموذج ١',
+              title: 'إيجابيات وسائل التواصل الاجتماعي',
+              intro: 'عرض دور التكنولوجيا الحديثة في تقريب المسافات وتحويل العالم إلى قرية معرفية متصلة.',
+              arguments: [
+                'تسهيل التعلم الذاتي وتبادل المصادر التعليمية والدورات المجانية بين الطلاب والمعلمين.',
+                'تعزيز التواصل الأسري والاجتماعي وتقليص المسافات الجغرافية بتكلفة ميسّرة.',
+                'دعم ريادة الأعمال والمشروعات الصغيرة وفتح أسواق رقمية للشباب.'
+              ],
+              examples: 'المنصات التعليمية التي تتيح المراجعات المجانية، وحملات التوعية الصحية والبيئية التي تصل لملايين المستخدمين في دقائق.',
+              conclusion: 'الدعوة إلى الاستخدام الواعي المنظّم لتحقيق أقصى استفادة مع تجنب إهدار الوقت.'
+            },
+            {
+              id: 'topic_2',
+              source: 'نموذج ١',
+              title: 'أهمية العمل التطوعي ومساعدة الآخرين',
+              intro: 'بيان أن التكافل والتطوع يمثلان ركيزة أساسية لتماسك المجتمع ونهضته الأخلاقية.',
+              arguments: [
+                'غرس قيم الرحمة والإيثار والشعور بالمسؤولية المجتمعية في نفوس الشباب.',
+                'مساندة الفئات الأكثر احتياجًا وتخفيف الأعباء عن مؤسسات الدولة.',
+                'تنمية المهارات الشخصية للمتطوع مثل العمل الجماعي والقيادة وحل المشكلات.'
+              ],
+              examples: 'مبادرات تشجير الأحياء، وحملات التبرع بالدم، وتنظيم فصول تقوية مجانية للطلاب غير القادرين.',
+              conclusion: 'تأكيد أن العطاء يثري نفس صاحبه بقدر ما ينفع الآخرين، ويبني وطنًا متراحمًا.'
+            },
+            {
+              id: 'topic_3',
+              source: 'نموذج ٢',
+              title: 'أهمية الالتزام بالأخلاق في تشجيع المباريات الرياضية',
+              intro: 'الرياضة وسيلة للرقي والتهذيب والتنافس الشريف، ولا تكتمل قيمتها إلا بتحلي الجماهير بالروح الرياضية.',
+              arguments: [
+                'نبذ التعصب يحمي السلم المجتمعي ويمنع تحوّل المتعة الرياضية إلى خلافات وشقاق.',
+                'التشجيع الحضاري يرفع معنويات اللاعبين ويعكس صورة مشرفة للوطن أمام العالم.',
+                'احترام المنافس وتقبل الهزيمة والفوز بروح عالية يعلم الأجيال الانضباط والعدل.'
+              ],
+              examples: 'تحية الجماهير للفريق المنافس بعد الأداء المميز، وتنظيف المدرجات بعد انتهاء المباريات الكبرى.',
+              conclusion: 'دعوة المشجعين لجعل المدرجات ساحة للأخلاق والاحترام المتبادل قبل المنافسة.'
+            },
+            {
+              id: 'topic_4',
+              source: 'نموذج ٢',
+              title: 'آداب التعامل مع الوالدين وعاطفة الوالدين تجاه الأبناء',
+              intro: 'الوالدان هما مصدر الحنان الأول والتضحية الصادقة التي لا تنتظر مقابلًا.',
+              arguments: [
+                'بر الوالدين واجب ديني وأخلاقي، يبدأ بخفض الصوت وحسن الإنصات ولين الخطاب.',
+                'عاطفة الأبوين فطرية عميقة تدفعهما لبذل الجهد والعمر في سبيل تربية الأبناء وتأمين مستقبلهم.',
+                'طاعتهما واستشارتهما والاهتمام بهما عند الكبر تمنح الإنسان البركة والطمأنينة.'
+              ],
+              examples: 'سهر الأم لراحة أبنائها، وكفاح الأب اليومي لتوفير التعليم والحياة الكريمة لأسرته.',
+              conclusion: 'التأكيد على أن رضا الوالدين طريق النجاح في الدنيا والفوز برضا الله.'
+            }
+          ],
+          calligraphySamples: [
+            {
+              source: 'نموذج ١',
+              lines: ['إِنْ كُنْتَ فِي ضِيقٍ فَلَا تَكُ فِي حَرَجْ', 'وَاصْبِرْ فَإِنَّ الصَّبْرَ مِفْتَاحُ الفَرَجْ']
+            },
+            {
+              source: 'نموذج ٢',
+              lines: ['العِلْمُ يُجْدِي وَيَبْقَى لِلْفَتَى أَبَدًا', 'وَالمَالُ يَفْنَى وَإِنْ أَجْدَى إِلَى حِينِ']
+            }
+          ],
+          dictationTips: [
+            'انتبه في «وصايا الحكماء» (إملاء نموذج ٢) إلى همزتي القطع والوصل (مثل: أَخلِص، استمِع، احفظ).',
+            'ميّز بين التاء المربوطة والهاء المربوطة في نهاية الكلمات (مثل: الحكمة / عقله).',
+            'راعِ كتابة الهمزة المتوسطة حسب قوة الحركات (الكسرة ← الضمة ← الفتحة ← السكون)، وعلامات الترقيم (الفاصلة، والفاصلة المنقوطة، والنقطة).'
+          ]
+        }
+      }
+    ];
+
+    /* =========================================================================
+       2. 5 CALM PASTEL COLOR THEMES & 20 DEDUPLICATED FLASHCARDS
+       ========================================================================= */
+    const FLASHCARD_THEMES = {
+      synonym: {
+        label: 'مرادف ومعنى',
+        bg: '#E6F4FE',
+        backBg: '#F2F9FF',
+        border: '#9AD0F5',
+        accent: '#0369A1',
+        darkText: '#0C4A6E',
+        icon: 'ph-book-open-text'
+      },
+      antonym: {
+        label: 'مضاد وتضاد',
+        bg: '#FFF0E8',
+        backBg: '#FFF7F2',
+        border: '#F5BFA3',
+        accent: '#C2410C',
+        darkText: '#7C2D12',
+        icon: 'ph-arrows-left-right'
+      },
+      morphology: {
+        label: 'مفرد وجمع',
+        bg: '#F3ECFF',
+        backBg: '#F9F5FF',
+        border: '#CBB2F6',
+        accent: '#6D28D9',
+        darkText: '#4C1D95',
+        icon: 'ph-squares-four'
+      },
+      rhetoric: {
+        label: 'جماليات ودلالة',
+        bg: '#FEF6DE',
+        backBg: '#FFFBF0',
+        border: '#ECCB78',
+        accent: '#B45309',
+        darkText: '#78350F',
+        icon: 'ph-sparkle'
+      },
+      grammar: {
+        label: 'نحو ومشتقات',
+        bg: '#E7F8EF',
+        backBg: '#F2FCF7',
+        border: '#9BD8B8',
+        accent: '#047857',
+        darkText: '#064E3B',
+        icon: 'ph-scales'
+      }
+    };
+
+    const FLASHCARDS = [
+      { id: 'fc_1',  theme: 'synonym',    front: 'مرادف «التكدّس»', subtitle: 'درس: مستقبل مصر في الزراعة', back: 'الازدحام والتراكم', note: 'في سياق: تخفيف التكدس السكاني في الوادي والدلتا.' },
+      { id: 'fc_2',  theme: 'synonym',    front: 'المراد بـ «ملموسًا»', subtitle: 'درس: حرفتك بين يديك', back: 'ملحوظًا وظاهرًا في الواقع', note: 'تغيرت النظرة للتعليم الفني تغيرًا ملموسًا.' },
+      { id: 'fc_3',  theme: 'antonym',    front: 'مضاد «تمحيص»', subtitle: 'درس: أفضل النعم', back: 'سطحية (والتسرع دون تدقيق)', note: 'التمحيص هو التدقيق والفحص العميق للوصول إلى الحقيقة.' },
+      { id: 'fc_4',  theme: 'rhetoric',   front: 'دلالة وصف الأحكام بـ «مبتسرة»', subtitle: 'درس: أفضل النعم', back: 'التنفير من التسرع في إصدار أحكام ناقصة غير موضوعية', note: 'مبتسرة أي مقطوعة وناقصة لم تنضج.' },
+      { id: 'fc_5',  theme: 'synonym',    front: 'المراد بـ «الموثوقة»', subtitle: 'درس: أفضل النعم', back: 'المعتمدة الصحيحة', note: 'البحث عن الحقيقة من مصادرها الموثوقة.' },
+      { id: 'fc_6',  theme: 'morphology', front: 'مفرد «خُلَصائه»', subtitle: 'نص: الصداقة', back: 'خَليص (على وزن فَعيل)', note: 'مثل: كُرَماء ← كَريم، خُلَصاء ← خَليص.' },
+      { id: 'fc_7',  theme: 'antonym',    front: 'مضاد «يسعفك»', subtitle: 'نص: الصداقة', back: 'يخذلك (ويتخلى عنك)', note: 'معنى يسعفك: يعينك وينجدك في الشدة.' },
+      { id: 'fc_19', theme: 'rhetoric',   front: 'دلالة «غير مدخرين رأيًا سليمًا»', subtitle: 'نص: الصداقة', back: 'حرص الأصدقاء على تقديم النصيحة والرأي السديد دون بخل', note: 'نفي الادخار يؤكد الإخلاص وبذل أقصى النصح.' },
+      { id: 'fc_8',  theme: 'synonym',    front: 'معنى «مآربه»', subtitle: 'نص: تاج الفضائل', back: 'حاجاته ومقاصده ومطالبه', note: 'مفردها: مأربة.' },
+      { id: 'fc_9',  theme: 'antonym',    front: 'معنى «التليد» ومضاده «الطريف»', subtitle: 'نص: اصنع بيدك مجدك', back: 'التليد: الأصيل الموروث — الطريف: الجديد المصنوع', note: 'بينهما تضاد يوضح المعنى ويؤكده.' },
+      { id: 'fc_10', theme: 'rhetoric',   front: 'الجمال في «يزين الفتى صحة عقله»', subtitle: 'نص: تاج الفضائل', back: 'تصوير للعقل السليم بالزينة التي تُجمّل الإنسان', note: 'يدل على أثر العقل في رفع قدر صاحبه بين الناس.' },
+      { id: 'fc_20', theme: 'rhetoric',   front: 'غرض الاستفهام «وهل نسود بكون ماضينا سعيدًا؟»', subtitle: 'نص: اصنع بيدك مجدك', back: 'النفي', note: 'لا تتحقق السيادة بحاضر شقي اعتمادًا على ماضٍ سعيد فقط.' },
+      { id: 'fc_11', theme: 'grammar',    front: 'اسم الفاعل من «يرى» في جملة مرفوعة', subtitle: 'اسم الفاعل من الثلاثي الناقص', back: 'المؤمن راءٍ أنوار الحق', note: 'تُحذف الياء ويعوّض عنها بتنوين الكسر لأنه نكرة مرفوعة غير مضافة.' },
+      { id: 'fc_12', theme: 'grammar',    front: 'اسم الزمان من «يعود»', subtitle: 'اسم الزمان من الثلاثي الأجوف', back: 'مَعاد (وقت الأصيل مَعاد الفلاحين)', note: 'يأتي من الأجوف (عاد) على وزن «مَفْعَل».' },
+      { id: 'fc_13', theme: 'grammar',    front: 'تصويب: «أنت مدعي إلى حفل التكريم»', subtitle: 'اسم المفعول من الناقص الواوي', back: 'أنت مَدْعُوّ إلى حفل التكريم', note: 'دعا ← يدعو ← مَدْعُوّ (إدغام واو مفعول في لام الكلمة).' },
+      { id: 'fc_14', theme: 'grammar',    front: 'تحويل «معطاء» إلى اسم فاعل', subtitle: 'اسم الفاعل من غير الثلاثي الناقص', back: 'الرجل مُعْطٍ الناسَ حقوقهم', note: 'الفعل أعطى ← يُعطي ← مُعْطٍ (حُذفت الياء لأنه نكرة مرفوعة).' },
+      { id: 'fc_15', theme: 'grammar',    front: 'نوع ووزن «مرآة» و«المِشرط»', subtitle: 'اسم الآلة المشتق القياسي', back: 'مرآة: مشتق على وزن مِفعَلة — مِشرط: مشتق على وزن مِفعَل', note: 'أصل «مرآة» مِرأية من الفعل (رأى).' },
+      { id: 'fc_16', theme: 'grammar',    front: 'فعل صيغة المبالغة «المِعوان»', subtitle: 'صيغ المبالغة من غير الثلاثي', back: 'أعان (فعل رباعي)', note: 'تأتي صيغ المبالغة غالبًا من الثلاثي وقليلًا من الرباعي مثل: أعان ← مِعوان.' },
+      { id: 'fc_17', theme: 'grammar',    front: 'اسم الزمان والمكان من «وَعَدَ»', subtitle: 'اسم الزمان والمكان من المثال الواوي', back: 'مَوْعِد (على وزن مَفْعِل)', note: 'زمان: مَوْعِد الامتحان صباحًا | مكان: مَوْعِد اللقاء النادي.' },
+      { id: 'fc_18', theme: 'grammar',    front: 'إعراب «انطلاقًا» و«سهلًا» بعد الفعل «جعل»', subtitle: 'الأفعال التي تنصب مفعولين', back: 'مفعول به ثانٍ منصوب وعلامة نصبه الفتحة', note: 'اجعل مطلعَ (م١) اليوم انطلاقًا (م٢) / تجعل الصعبَ (م١) سهلًا (م٢).' }
+    ];
+
+    /* Flatten question pools for stats and Comprehensive Quiz */
+    const ALL_QUESTIONS = [];
+    const ALL_MCQS = [];
+    STATIONS.forEach(station => {
+      station.sections.forEach(sec => {
+        sec.questions.forEach(q => {
+          const item = { ...q, stationId: station.id, stationTitle: station.shortTitle };
+          ALL_QUESTIONS.push(item);
+          if (q.type === 'mcq') ALL_MCQS.push(item);
+        });
+      });
+    });
+
+    /* =========================================================================
+       3. STATE MANAGEMENT & LOCALSTORAGE PERSISTENCE (PRESERVED KEY)
+       ========================================================================= */
+    const STORAGE_KEY = 'prep3_arabic_study_plan_v1';
+
+    const DEFAULT_STATE = {
+      currentView: 'plan',
+      currentStationId: 1,
+      completedStations: [],
+      mcqAnswers: {},        // { qId: chosenOptionIndex }
+      essayStatus: {},       // { qId: 'known' | 'review' }
+      essayDrafts: {},       // { qId: text }
+      revealedEssays: {},    // { qId: boolean }
+      bookmarks: [],         // array of qIds
+      flashcardStatus: {},   // { fcId: 'known' | 'review' }
+      muted: false,
+      quizBestPercent: null
+    };
+
+    let state = loadState();
+
+    // Ephemeral UI state (not persisted)
+    let uiState = {
+      confirmReset: false,
+      grammarOpen: false,
+      openWritingTopic: 'topic_1',
+      planPreviewCardIdx: 0,
+      reviewSubTab: 'flashcards',   // 'flashcards' | 'bookmarks'
+      flashcardMode: 'flip',        // 'flip' | 'grid'
+      flashcardFilter: 'all',       // 'all' | 'synonym' | 'antonym' | 'morphology' | 'rhetoric' | 'grammar' | 'review'
+      flashcardIndex: 0,
+      flashcardFlipped: false,
+      flashcardOrder: FLASHCARDS.map(c => c.id),
+      flippedGridCards: {},         // { fcId: boolean }
+      deckEnterAnim: '',
+      deckTransitionLock: false,
+      touchStartX: 0,
+      touchStartY: 0,
+      justSwiped: false,
+      quiz: {
+        branchFilter: 'الكل',
+        instantMode: true,
+        useTimer: false,
+        started: false,
+        finished: false,
+        questions: [],
+        currentIndex: 0,
+        answers: {},
+        secondsElapsed: 0,
+        timerInterval: null
+      }
+    };
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return JSON.parse(JSON.stringify(DEFAULT_STATE));
+        const parsed = JSON.parse(raw);
+        return { ...JSON.parse(JSON.stringify(DEFAULT_STATE)), ...parsed };
+      } catch (e) {
+        return JSON.parse(JSON.stringify(DEFAULT_STATE));
+      }
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (e) {
+        // Ignore storage errors gracefully
+      }
+      updateGlobalChrome();
+    }
+
+    /* =========================================================================
+       4. GENTLE WEB AUDIO API SYNTHESIZER (NO EXTERNAL FILES, TRIGGERED ON CLICK)
+       ========================================================================= */
+    let audioCtx = null;
+
+    function getAudioCtx() {
+      if (state.muted) return null;
+      try {
+        if (!audioCtx) {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (!AudioContextClass) return null;
+          audioCtx = new AudioContextClass();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        return audioCtx;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    // Soft realistic paper-flip whoosh & muted wooden click
+    function playFlipSound() {
+      const ctx = getAudioCtx();
+      if (!ctx) return;
+      try {
+        const now = ctx.currentTime;
+
+        // Filtered gentle paper rustle (70ms)
+        const bufferSize = Math.floor(ctx.sampleRate * 0.07);
+        const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+        const data = noiseBuffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+          const env = Math.sin((i / bufferSize) * Math.PI);
+          data[i] = (Math.random() * 2 - 1) * env * 0.32;
+        }
+        const noise = ctx.createBufferSource();
+        noise.buffer = noiseBuffer;
+
+        const filter = ctx.createBiquadFilter();
+        filter.type = 'bandpass';
+        filter.frequency.setValueAtTime(1100, now);
+        filter.Q.setValueAtTime(1.1, now);
+
+        const noiseGain = ctx.createGain();
+        noiseGain.gain.setValueAtTime(0.055, now);
+        noiseGain.gain.exponentialRampToValueAtTime(0.001, now + 0.07);
+
+        noise.connect(filter);
+        filter.connect(noiseGain);
+        noiseGain.connect(ctx.destination);
+        noise.start(now);
+
+        // Soft muted click
+        const osc = ctx.createOscillator();
+        const tickGain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(290, now);
+        osc.frequency.exponentialRampToValueAtTime(145, now + 0.045);
+        tickGain.gain.setValueAtTime(0.0001, now);
+        tickGain.gain.exponentialRampToValueAtTime(0.042, now + 0.008);
+        tickGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.052);
+        osc.connect(tickGain);
+        tickGain.connect(ctx.destination);
+        osc.start(now);
+        osc.stop(now + 0.058);
+      } catch (e) {}
+    }
+
+    // Pleasant chime on correct answer
+    function playCorrectSound() {
+      const ctx = getAudioCtx();
+      if (!ctx) return;
+      const now = ctx.currentTime;
+      const notes = [523.25, 659.25];
+      notes.forEach((freq, i) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now + i * 0.09);
+        gain.gain.setValueAtTime(0.0001, now + i * 0.09);
+        gain.gain.exponentialRampToValueAtTime(0.075, now + i * 0.09 + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + i * 0.09 + 0.34);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now + i * 0.09);
+        osc.stop(now + i * 0.09 + 0.37);
+      });
+    }
+
+    // Gentle low tap on wrong answer
+    function playWrongSound() {
+      const ctx = getAudioCtx();
+      if (!ctx) return;
+      const now = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(190, now);
+      osc.frequency.exponentialRampToValueAtTime(132, now + 0.14);
+      gain.gain.setValueAtTime(0.0001, now);
+      gain.gain.exponentialRampToValueAtTime(0.085, now + 0.012);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.18);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.2);
+    }
+
+    // Soft arpeggio chord on completing a station or quiz
+    function playCompleteSound() {
+      const ctx = getAudioCtx();
+      if (!ctx) return;
+      const now = ctx.currentTime;
+      const chord = [392.0, 493.88, 587.33, 783.99];
+      chord.forEach((freq, idx) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        const start = now + idx * 0.08;
+        osc.frequency.setValueAtTime(freq, start);
+        gain.gain.setValueAtTime(0.0001, start);
+        gain.gain.exponentialRampToValueAtTime(0.06, start + 0.03);
+        gain.gain.exponentialRampToValueAtTime(0.0001, start + 0.65);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(start);
+        osc.stop(start + 0.68);
+      });
+    }
+
+    function toggleMute() {
+      state.muted = !state.muted;
+      saveState();
+      showToast(state.muted ? 'تم كتم المؤثرات الصوتية' : 'تم تفعيل المؤثرات الصوتية', state.muted ? 'ph-speaker-slash' : 'ph-speaker-high');
+    }
+
+    /* =========================================================================
+       5. MOROCCAN / ANDALUSIAN ORNAMENTAL SVGS & UTILITY HELPERS
+       ========================================================================= */
+
+    /**
+     * Renders the symmetrical Andalusian/Moroccan arched floral-geometric side ornament
+     * matching the user-approved parchment banner preview (sage-teal, pale sky, warm sand).
+     */
+    function buildAndalusianSideOrnament(side = 'right') {
+      const flipTransform = side === 'left' ? 'transform: scaleX(-1);' : '';
+      const posClass = side === 'right' ? 'right-0' : 'left-0';
+      return `
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 112 180"
+          preserveAspectRatio="none"
+          class="pointer-events-none absolute top-0 bottom-0 ${posClass} h-full w-16 sm:w-28 opacity-90"
+          style="${flipTransform}"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Outer soft sage & sand border band -->
+          <rect x="0" y="0" width="112" height="180" fill="none" />
+          <!-- Top & Bottom scalloped geometric edge accents -->
+          <path d="M0 0 H92 C66 12, 54 34, 48 52 C38 72, 22 80, 12 90 C22 100, 38 108, 48 128 C54 146, 66 168, 92 180 H0 Z" fill="#F4EFE4" />
+          <!-- Delicate Moroccan lobed arch curve -->
+          <path d="M96 4 C72 10, 62 28, 56 46 C49 66, 36 78, 18 90 C36 102, 49 114, 56 134 C62 152, 72 170, 96 176" fill="none" stroke="#CBB99B" stroke-width="1.8" />
+          <path d="M104 9 C82 15, 71 31, 65 49 C58 68, 46 79, 28 90 C46 101, 58 112, 65 131 C71 149, 82 165, 104 171" fill="none" stroke="#D6C4A6" stroke-width="1" stroke-dasharray="3 2" />
+          <!-- Floral arabesque petals in pale sky, sage-teal & warm sand -->
+          <g fill="#D9ECEB" stroke="#9EC5C0" stroke-width="1">
+            <!-- Upper rosette -->
+            <path d="M22 24 C34 16, 46 22, 42 36 C30 42, 18 36, 22 24 Z" />
+            <path d="M12 46 C24 38, 36 46, 30 58 C18 62, 8 54, 12 46 Z" fill="#E8DFCE" stroke="#CBB99B" />
+            <!-- Center medallion -->
+            <ellipse cx="14" cy="90" rx="8" ry="12" fill="#D9ECEB" stroke="#9EC5C0" stroke-width="1.2" />
+            <circle cx="14" cy="90" r="3.5" fill="#9EC5C0" />
+            <!-- Lower rosette (mirrored) -->
+            <path d="M22 156 C34 164, 46 158, 42 144 C30 138, 18 144, 22 156 Z" />
+            <path d="M12 134 C24 142, 36 134, 30 122 C18 118, 8 126, 12 134 Z" fill="#E8DFCE" stroke="#CBB99B" />
+          </g>
+          <!-- Fine geometric vine curls -->
+          <path d="M4 18 Q28 18 42 42 M4 162 Q28 162 42 138 M6 68 Q22 72 28 84 M6 112 Q22 108 28 96" fill="none" stroke="#B7A384" stroke-width="1.1" opacity="0.7" />
+          <!-- Decorative corner diamond beads -->
+          <path d="M56 14 L62 19 L56 24 L50 19 Z" fill="#9EC5C0" opacity="0.65" />
+          <path d="M56 156 L62 161 L56 166 L50 161 Z" fill="#9EC5C0" opacity="0.65" />
+        </svg>
+      `;
+    }
+
+    /**
+     * Subtle Moroccan 8-point star watermark pattern for flashcards & subtle cards
+     */
+    function buildMoroccanWatermarkSvg(patternId, colorHex, opacity = '0.06') {
+      return `
+        <svg aria-hidden="true" class="pointer-events-none absolute inset-0 w-full h-full" style="color: ${colorHex}; opacity: ${opacity};" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="${patternId}" width="54" height="54" patternUnits="userSpaceOnUse">
+              <path d="M27 3 L51 27 L27 51 L3 27 Z" fill="none" stroke="currentColor" stroke-width="1.05" />
+              <rect x="11" y="11" width="32" height="32" fill="none" stroke="currentColor" stroke-width="0.95" />
+              <circle cx="27" cy="27" r="4.5" fill="none" stroke="currentColor" stroke-width="1" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#${patternId})" />
+        </svg>
+      `;
+    }
+
+    function buildMoroccanCornerStar(colorHex, positionClass = 'bottom-2.5 left-2.5', opacity = '0.10') {
+      return `
+        <svg aria-hidden="true" viewBox="0 0 80 80" class="pointer-events-none absolute ${positionClass} w-20 h-20" style="color: ${colorHex}; opacity: ${opacity};" xmlns="http://www.w3.org/2000/svg">
+          <path d="M40 6 L74 40 L40 74 L6 40 Z" fill="none" stroke="currentColor" stroke-width="1.8" />
+          <rect x="16" y="16" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.4" />
+          <circle cx="40" cy="40" r="8" fill="none" stroke="currentColor" stroke-width="1.4" />
+          <circle cx="40" cy="40" r="3" fill="currentColor" />
+        </svg>
+      `;
+    }
+
+    function buildAndalusianDivider(colorHex = '#CBB99B') {
+      return `
+        <div class="flex items-center justify-center gap-2 my-1" aria-hidden="true">
+          <span class="h-[1.5px] w-10 rounded-full" style="background-color: ${colorHex}; opacity: 0.45;"></span>
+          <svg viewBox="0 0 28 12" class="w-7 h-3 shrink-0" style="color: ${colorHex}; opacity: 0.85;" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 1 L19 6 L14 11 L9 6 Z" fill="currentColor" />
+            <circle cx="4" cy="6" r="1.6" fill="currentColor" opacity="0.65" />
+            <circle cx="24" cy="6" r="1.6" fill="currentColor" opacity="0.65" />
+          </svg>
+          <span class="h-[1.5px] w-10 rounded-full" style="background-color: ${colorHex}; opacity: 0.45;"></span>
+        </div>
+      `;
+    }
+
+    let toastTimer = null;
+    function showToast(message, icon = 'ph-check-circle') {
+      const container = document.getElementById('toast-container');
+      const msgEl = document.getElementById('toast-message');
+      const iconEl = document.getElementById('toast-icon');
+      if (!container || !msgEl) return;
+
+      msgEl.textContent = message;
+      iconEl.className = `ph ${icon} text-base`;
+      container.classList.remove('opacity-0', 'translate-y-2');
+      container.classList.add('opacity-100', 'translate-y-0');
+
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        container.classList.remove('opacity-100', 'translate-y-0');
+        container.classList.add('opacity-0', 'translate-y-2');
+      }, 2400);
+    }
+
+    function toArabicDigits(num) {
+      const digits = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+      return String(num).replace(/\d/g, d => digits[Number(d)]);
+    }
+
+    function isQuestionSolved(q) {
+      if (q.type === 'mcq') return state.mcqAnswers[q.id] !== undefined;
+      return state.essayStatus[q.id] !== undefined;
+    }
+
+    function getStationStats(station) {
+      let total = 0;
+      let solved = 0;
+      station.sections.forEach(sec => {
+        sec.questions.forEach(q => {
+          total++;
+          if (isQuestionSolved(q)) solved++;
+        });
+      });
+      const isCompleted = state.completedStations.includes(station.id);
+      let status = 'not_started';
+      if (isCompleted) status = 'completed';
+      else if (solved > 0) status = 'in_progress';
+      return { total, solved, isCompleted, status };
+    }
+
+    function getSavedReviewIds() {
+      const set = new Set(state.bookmarks);
+      Object.entries(state.essayStatus).forEach(([qId, status]) => {
+        if (status === 'review') set.add(qId);
+      });
+      return Array.from(set);
+    }
+
+    function getOverallProgress() {
+      const totalQ = ALL_QUESTIONS.length;
+      const solvedQ = ALL_QUESTIONS.filter(isQuestionSolved).length;
+      const completedSt = state.completedStations.length;
+      const pct = Math.round(((solvedQ / totalQ) * 0.7 + (completedSt / STATIONS.length) * 0.3) * 100);
+      return {
+        totalQ,
+        solvedQ,
+        completedSt,
+        totalSt: STATIONS.length,
+        savedCount: getSavedReviewIds().length,
+        percent: Math.min(100, pct)
+      };
+    }
+
+    function updateGlobalChrome() {
+      const prog = getOverallProgress();
+      const bar = document.getElementById('header-progress-bar');
+      const txt = document.getElementById('header-progress-text');
+      const muteIcon = document.getElementById('mute-icon');
+      const dDot = document.getElementById('desktop-bookmark-dot');
+      const mDot = document.getElementById('mobile-bookmark-dot');
+
+      if (bar) bar.style.width = `${prog.percent}%`;
+      if (txt) txt.textContent = `${prog.percent}%`;
+      if (muteIcon) {
+        muteIcon.className = state.muted ? 'ph ph-speaker-slash text-lg' : 'ph ph-speaker-high text-lg';
+      }
+      const hasSaved = prog.savedCount > 0;
+      if (dDot) dDot.classList.toggle('hidden', !hasSaved);
+      if (mDot) mDot.classList.toggle('hidden', !hasSaved);
+
+      document.querySelectorAll('.desktop-nav-btn').forEach(btn => {
+        const active = btn.dataset.nav === state.currentView;
+        btn.className = `desktop-nav-btn flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-sm font-semibold transition-colors relative ${
+          active ? 'bg-accentSoft text-accent' : 'text-slateCalm hover:text-ink hover:bg-paper'
+        }`;
+      });
+      document.querySelectorAll('.mobile-nav-btn').forEach(btn => {
+        const active = btn.dataset.nav === state.currentView;
+        btn.className = `mobile-nav-btn flex flex-col items-center justify-center gap-1 min-h-[48px] text-xs font-semibold transition-colors relative ${
+          active ? 'text-accent' : 'text-slateCalm'
+        }`;
+      });
+    }
+
+    function switchView(viewName, options = {}) {
+      if (uiState.quiz.timerInterval && viewName !== 'quiz') {
+        clearInterval(uiState.quiz.timerInterval);
+        uiState.quiz.timerInterval = null;
+      }
+      state.currentView = viewName;
+      if (options.stationId) {
+        state.currentStationId = options.stationId;
+      }
+      if (options.reviewSubTab) {
+        uiState.reviewSubTab = options.reviewSubTab;
+      }
+      saveState();
+      renderApp();
+      if (options.scrollToQuestionId) {
+        setTimeout(() => {
+          const el = document.getElementById(`q-card-${options.scrollToQuestionId}`);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 80);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    /* =========================================================================
+       6. VIEW 1: PLAN OVERVIEW (خطة المذاكرة)
+       ========================================================================= */
+    function renderPlanView() {
+      const prog = getOverallProgress();
+      const days = [
+        { day: 1, label: 'اليوم الأول', subtitle: 'القراءة وبناء الفهم' },
+        { day: 2, label: 'اليوم الثاني', subtitle: 'النصوص النثرية والشعرية' },
+        { day: 3, label: 'اليوم الثالث', subtitle: 'النحو والتعبير والخط' }
+      ];
+
+      // Sample card for the compact stacked flashcard preview widget
+      const previewSamples = [FLASHCARDS[0], FLASHCARDS[2], FLASHCARDS[5], FLASHCARDS[10], FLASHCARDS[12]];
+      const pIdx = uiState.planPreviewCardIdx % previewSamples.length;
+      const pCard = previewSamples[pIdx];
+      const pTheme = FLASHCARD_THEMES[pCard.theme];
+      const pNext1 = FLASHCARD_THEMES[previewSamples[(pIdx + 1) % previewSamples.length].theme];
+      const pNext2 = FLASHCARD_THEMES[previewSamples[(pIdx + 2) % previewSamples.length].theme];
+
+      return `
+        <div class="view-enter space-y-6">
+          <!-- ==================== DEDICATED ORNAMENTAL NOTEBOOK TITLE BANNER ==================== -->
+          <section class="notebook-title-frame rounded-2xl p-2 sm:p-2.5" aria-label="عنوان المذكرة">
+            <!-- Top & bottom delicate sage-teal beaded accent edge -->
+            <div class="notebook-title-inner rounded-xl px-4 sm:px-20 py-6 sm:py-8 text-center relative overflow-hidden">
+              ${buildAndalusianSideOrnament('right')}
+              ${buildAndalusianSideOrnament('left')}
+
+              <div class="relative z-10 space-y-2 max-w-xl mx-auto">
+                <h1 class="font-heading text-3xl sm:text-4xl font-bold text-ink leading-snug">
+                  مذكرة النماذج الاسترشادية للغة العربية
+                </h1>
+                <div class="font-heading text-xl sm:text-2xl font-bold text-ink/90">
+                  الصف الثالث الإعدادي
+                </div>
+                ${buildAndalusianDivider('#CBB99B')}
+                <div class="pt-0.5">
+                  <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-surface/90 border border-sandGold/60 text-xs font-semibold text-slateCalm">
+                    <i class="ph ph-seal-check text-sm text-accent"></i>
+                    <span>الفصل الدراسي الأول ٢٠٢٦ / ٢٠٢٧ — نسخة منقّحة بدون أسئلة مكررة</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== OVERVIEW DASHBOARD & STACKED FLASHCARD PREVIEW ==================== -->
+          <section class="grid grid-cols-1 md:grid-cols-12 gap-4 items-stretch">
+            <!-- Progress & Quick Start Card (7 columns on desktop) -->
+            <div class="md:col-span-7 bg-surface border border-borderWarm rounded-2xl p-5 shadow-calm flex flex-col justify-between gap-4">
+              <div class="space-y-2">
+                <div class="flex items-center justify-between gap-2">
+                  <h2 class="font-heading text-2xl font-bold text-ink">خطة المذاكرة التفاعلية</h2>
+                  <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-accentSoft text-accent tabular-nums">${prog.percent}%</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slateCalm leading-relaxed">
+                  مقسّمة على ٣ أيام (٦ محطات) تشمل <strong>${toArabicDigits(prog.totalQ)} سؤالًا فريدًا</strong> مع الإجابات النموذجية والشرح، بالإضافة إلى الاختبار الشامل وبطاقات المراجعة.
+                </p>
+              </div>
+
+              <!-- Progress Bar + 3 Clean Stats -->
+              <div class="bg-paper border border-borderWarm rounded-xl p-3.5 space-y-3">
+                <div class="w-full h-2.5 bg-borderWarm/80 rounded-full overflow-hidden">
+                  <div class="h-full bg-accent rounded-full transition-all duration-500" style="width: ${prog.percent}%"></div>
+                </div>
+                <div class="grid grid-cols-3 gap-2 text-center">
+                  <div>
+                    <div class="text-base sm:text-lg font-bold text-ink tabular-nums">${prog.completedSt} <span class="text-[11px] font-normal text-slateCalm">من ${prog.totalSt}</span></div>
+                    <div class="text-[11px] text-slateCalm">المحطات المنجزة</div>
+                  </div>
+                  <div class="border-x border-borderWarm/80">
+                    <div class="text-base sm:text-lg font-bold text-ink tabular-nums">${prog.solvedQ} <span class="text-[11px] font-normal text-slateCalm">من ${prog.totalQ}</span></div>
+                    <div class="text-[11px] text-slateCalm">الأسئلة المحلولة</div>
+                  </div>
+                  <div>
+                    <div class="text-base sm:text-lg font-bold text-amberAccent tabular-nums">${prog.savedCount}</div>
+                    <div class="text-[11px] text-slateCalm">للمراجعة</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Primary Action Buttons -->
+              <div class="flex flex-wrap gap-2">
+                <button
+                  onclick="switchView('station', { stationId: state.currentStationId })"
+                  class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-accent text-surface text-xs sm:text-sm font-semibold hover:opacity-95 transition-opacity min-h-[46px]"
+                >
+                  <i class="ph ph-play-circle text-lg"></i>
+                  <span>${prog.solvedQ > 0 ? 'متابعة المحطة' : 'ابدأ المذاكرة'}</span>
+                </button>
+                <button
+                  onclick="switchView('quiz')"
+                  class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-paper border border-borderWarm text-ink hover:bg-accentSoft hover:text-accent hover:border-accent/25 text-xs sm:text-sm font-semibold transition-colors min-h-[46px]"
+                >
+                  <i class="ph ph-exam text-lg"></i>
+                  <span>الاختبار (${ALL_MCQS.length})</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Compact Layered Colorful Flashcard Preview Widget (5 columns on desktop) -->
+            <div class="md:col-span-5 bg-surface border border-borderWarm rounded-2xl p-5 shadow-calm flex flex-col justify-between gap-4">
+              <div class="flex items-center justify-between gap-2">
+                <h2 class="font-heading text-xl font-bold text-ink">بطاقات المراجعة</h2>
+                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-paper border border-borderWarm text-slateCalm">
+                  ${toArabicDigits(FLASHCARDS.length)} بطاقة ملونة
+                </span>
+              </div>
+
+              <!-- Peeking 3-Layer Pastel Card Stack -->
+              <div class="relative py-2 pl-4 pr-1">
+                <!-- Back Card Layer 2 -->
+                <div
+                  class="absolute inset-y-3 left-0 right-5 rounded-2xl transition-colors duration-300"
+                  style="background-color: ${pNext2.bg}; border: 1.5px solid ${pNext2.border}; transform: translateY(6px);"
+                ></div>
+                <!-- Middle Card Layer 1 -->
+                <div
+                  class="absolute inset-y-2.5 left-2 right-3 rounded-2xl transition-colors duration-300"
+                  style="background-color: ${pNext1.bg}; border: 1.5px solid ${pNext1.border}; transform: translateY(3px);"
+                ></div>
+
+                <!-- Active Front Mini Card -->
+                <div
+                  class="relative z-10 rounded-2xl p-4 shadow-calm transition-all duration-300 space-y-2.5"
+                  style="background-color: ${pTheme.bg}; border: 1.5px solid ${pTheme.border};"
+                >
+                  <div class="flex items-center justify-between gap-1.5">
+                    <span
+                      class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold text-surface"
+                      style="background-color: ${pTheme.accent};"
+                    >
+                      <i class="ph ${pTheme.icon} text-xs"></i>
+                      <span>${pTheme.label}</span>
+                    </span>
+                    <div class="flex items-center gap-1">
+                      <button
+                        onclick="stepPlanPreviewCard(-1)"
+                        class="w-7 h-7 rounded-lg bg-surface/90 border flex items-center justify-center hover:scale-105 transition-transform"
+                        style="border-color: ${pTheme.border}; color: ${pTheme.accent};"
+                        aria-label="البطاقة السابقة"
+                      >
+                        <i class="ph ph-caret-right text-sm"></i>
+                      </button>
+                      <button
+                        onclick="stepPlanPreviewCard(1)"
+                        class="w-7 h-7 rounded-lg bg-surface/90 border flex items-center justify-center hover:scale-105 transition-transform"
+                        style="border-color: ${pTheme.border}; color: ${pTheme.accent};"
+                        aria-label="البطاقة التالية"
+                      >
+                        <i class="ph ph-caret-left text-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="py-1 text-center">
+                    <div class="font-heading text-xl font-bold text-ink leading-snug">${pCard.front}</div>
+                    <div class="text-[11px] font-medium mt-0.5" style="color: ${pTheme.darkText};">${pCard.subtitle}</div>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                onclick="switchView('review', { reviewSubTab: 'flashcards' })"
+                class="w-full py-2.5 px-4 rounded-xl bg-accentSoft border border-accent/20 text-accent hover:bg-accent hover:text-surface text-xs sm:text-sm font-semibold transition-colors min-h-[44px] inline-flex items-center justify-center gap-2"
+              >
+                <i class="ph ph-cards text-base"></i>
+                <span>فتح بطاقات التقليب الملونة</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- ==================== 3-DAY STUDY PLAN GRID ==================== -->
+          <section class="space-y-5">
+            <div class="flex items-center justify-between gap-2">
+              <h2 class="font-heading text-2xl font-bold text-ink flex items-center gap-2">
+                <i class="ph ph-calendar-check text-accent text-xl shrink-0"></i>
+                <span>جدول المحطات على ٣ أيام</span>
+              </h2>
+              <span class="text-xs font-medium text-slateCalm shrink-0">اضغط على أي محطة للبدء</span>
+            </div>
+
+            ${days.map(dayObj => {
+              const dayStations = STATIONS.filter(s => s.day === dayObj.day);
+              return `
+                <div class="space-y-3">
+                  <div class="flex items-center gap-2.5">
+                    <span class="px-3 py-1 rounded-lg bg-ink text-surface text-xs font-semibold">${dayObj.label}</span>
+                    <span class="text-sm font-semibold text-slateCalm">${dayObj.subtitle}</span>
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    ${dayStations.map(st => {
+                      const stats = getStationStats(st);
+                      let badgeHtml = '';
+                      if (stats.status === 'completed') {
+                        badgeHtml = `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-successSoft text-success text-xs font-semibold"><i class="ph ph-check-circle"></i> مكتملة</span>`;
+                      } else if (stats.status === 'in_progress') {
+                        badgeHtml = `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amberSoft text-amberAccent text-xs font-semibold"><i class="ph ph-clock"></i> قيد المذاكرة</span>`;
+                      } else {
+                        badgeHtml = `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-paper border border-borderWarm text-slateCalm text-xs font-medium">لم تبدأ</span>`;
+                      }
+
+                      return `
+                        <button
+                          onclick="switchView('station', { stationId: ${st.id} })"
+                          class="text-right bg-surface border ${stats.isCompleted ? 'border-success/35' : 'border-borderWarm'} hover:border-accent/50 rounded-2xl p-4 sm:p-5 shadow-calm hover:shadow-calmHover transition-all flex flex-col justify-between gap-4 group"
+                        >
+                          <div class="space-y-2.5 w-full">
+                            <div class="flex items-center justify-between gap-2">
+                              <span class="w-10 h-10 rounded-xl ${stats.isCompleted ? 'bg-successSoft text-success' : 'bg-accentSoft text-accent'} flex items-center justify-center shrink-0">
+                                <i class="ph ${st.icon} text-xl"></i>
+                              </span>
+                              ${badgeHtml}
+                            </div>
+
+                            <div>
+                              <div class="text-xs font-semibold text-slateCalm">المحطة ${toArabicDigits(st.id)}</div>
+                              <h3 class="font-heading text-xl font-bold text-ink group-hover:text-accent transition-colors mt-0.5">${st.title}</h3>
+                              <p class="text-xs text-slateCalm mt-1 leading-relaxed">${st.subtitle}</p>
+                            </div>
+                          </div>
+
+                          <div class="w-full pt-3 border-t border-borderWarm/70 flex items-center justify-between text-xs">
+                            <span class="text-slateCalm font-medium">
+                              ${toArabicDigits(stats.solved)} / ${toArabicDigits(stats.total)} أسئلة ${st.id === 6 ? '+ دليل التعبير والخط' : ''}
+                            </span>
+                            <span class="inline-flex items-center gap-1 text-accent font-semibold">
+                              <span>فتح</span>
+                              <i class="ph ph-arrow-left text-sm group-hover:-translate-x-0.5 transition-transform"></i>
+                            </span>
+                          </div>
+                        </button>
+                      `;
+                    }).join('')}
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </section>
+
+          <!-- Reset Progress Section (Inline Confirmation — NO confirm() dialog) -->
+          <section class="pt-4 border-t border-borderWarm flex flex-wrap items-center justify-between gap-3">
+            <p class="text-xs text-slateCalm">يُحفظ تقدمك وإجاباتك تلقائيًا على هذا الجهاز.</p>
+            ${uiState.confirmReset ? `
+              <div class="flex items-center gap-2 bg-dangerSoft border border-danger/25 rounded-xl px-3 py-2">
+                <span class="text-xs font-semibold text-danger">هل تؤكد مسح كل التقدم؟</span>
+                <button onclick="performResetProgress()" class="px-3 py-1.5 rounded-lg bg-danger text-surface text-xs font-semibold">نعم، إعادة الضبط</button>
+                <button onclick="toggleResetConfirm(false)" class="px-3 py-1.5 rounded-lg bg-surface border border-borderWarm text-ink text-xs font-semibold">إلغاء</button>
+              </div>
+            ` : `
+              <button onclick="toggleResetConfirm(true)" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slateCalm hover:text-danger transition-colors py-2 px-3 rounded-lg hover:bg-dangerSoft">
+                <i class="ph ph-arrow-counter-clockwise text-sm"></i>
+                <span>إعادة ضبط التقدم</span>
+              </button>
+            `}
+          </section>
+        </div>
+      `;
+    }
+
+    function stepPlanPreviewCard(delta) {
+      playFlipSound();
+      uiState.planPreviewCardIdx = (uiState.planPreviewCardIdx + delta + 5) % 5;
+      renderApp();
+    }
+
+    function toggleResetConfirm(val) {
+      uiState.confirmReset = val;
+      renderApp();
+    }
+
+    function performResetProgress() {
+      const keepMute = state.muted;
+      state = JSON.parse(JSON.stringify(DEFAULT_STATE));
+      state.muted = keepMute;
+      uiState.confirmReset = false;
+      saveState();
+      renderApp();
+      showToast('تمت إعادة ضبط التقدم بنجاح', 'ph-arrow-counter-clockwise');
+    }
+
+    /* =========================================================================
+       7. VIEW 2: STUDY STATION (المحطات التفاعلية)
+       ========================================================================= */
+    function renderStationView() {
+      const station = STATIONS.find(s => s.id === state.currentStationId) || STATIONS[0];
+      const stats = getStationStats(station);
+      const nextStation = STATIONS.find(s => s.id === station.id + 1);
+
+      return `
+        <div class="view-enter space-y-6">
+          <!-- Station Switcher Pills -->
+          <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1" role="tablist" aria-label="التبديل بين المحطات">
+            ${STATIONS.map(st => {
+              const active = st.id === station.id;
+              const done = state.completedStations.includes(st.id);
+              return `
+                <button
+                  onclick="selectStation(${st.id})"
+                  class="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold border transition-colors min-h-[40px] ${
+                    active
+                      ? 'bg-accent text-surface border-accent'
+                      : done
+                        ? 'bg-successSoft text-success border-success/25 hover:border-success/50'
+                        : 'bg-surface text-slateCalm border-borderWarm hover:text-ink hover:border-ink/25'
+                  }"
+                >
+                  ${done && !active ? '<i class="ph ph-check-circle text-sm"></i>' : `<span>${toArabicDigits(st.id)}.</span>`}
+                  <span>${st.shortTitle}</span>
+                </button>
+              `;
+            }).join('')}
+          </div>
+
+          <!-- Station Header Card -->
+          <div class="relative overflow-hidden bg-surface border border-borderWarm rounded-2xl p-5 shadow-calm">
+            ${buildMoroccanWatermarkSvg(`st-head-geo-${station.id}`, '#1A2351', '0.035')}
+            <div class="relative z-10">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-accentSoft text-accent text-xs font-semibold">
+                  <i class="ph ${station.icon} text-sm"></i>
+                  <span>${station.dayTitle} — المحطة ${toArabicDigits(station.id)}</span>
+                </span>
+                <span class="text-xs font-semibold ${stats.isCompleted ? 'text-success' : 'text-slateCalm'}">
+                  ${toArabicDigits(stats.solved)} من ${toArabicDigits(stats.total)} أسئلة مجابة
+                </span>
+              </div>
+              <h1 class="font-heading text-2xl sm:text-3xl font-bold text-ink">${station.title}</h1>
+              <p class="text-sm text-slateCalm mt-1">${station.subtitle}</p>
+            </div>
+          </div>
+
+          <!-- Collapsible Grammar Cheat Sheet (Station 5 Only) -->
+          ${station.grammarCheatSheet ? `
+            <div class="bg-amberSoft/70 border border-amberAccent/25 rounded-2xl overflow-hidden">
+              <button
+                onclick="toggleGrammarSheet()"
+                class="w-full px-5 py-4 flex items-center justify-between gap-3 text-right min-h-[52px]"
+              >
+                <div class="flex items-center gap-2.5">
+                  <span class="w-8 h-8 rounded-lg bg-amberSoft text-amberAccent flex items-center justify-center border border-amberAccent/20 shrink-0">
+                    <i class="ph ph-sparkle text-lg"></i>
+                  </span>
+                  <div>
+                    <div class="font-heading text-lg font-bold text-ink">ملخص القواعد السريعة للنموذجين</div>
+                    <div class="text-xs text-slateCalm">راجع قواعد المشتقات والإعراب المتكررة قبل الحل</div>
+                  </div>
+                </div>
+                <i class="ph ${uiState.grammarOpen ? 'ph-caret-up' : 'ph-caret-down'} text-lg text-amberAccent shrink-0"></i>
+              </button>
+              ${uiState.grammarOpen ? `
+                <div class="px-5 pb-5 pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 border-t border-amberAccent/15">
+                  ${station.grammarCheatSheet.map(item => `
+                    <div class="bg-surface border border-borderWarm rounded-xl p-3.5">
+                      <div class="text-xs font-bold text-accent mb-1">${item.title}</div>
+                      <p class="text-xs sm:text-sm text-bodyInk leading-relaxed">${item.rule}</p>
+                    </div>
+                  `).join('')}
+                </div>
+              ` : ''}
+            </div>
+          ` : ''}
+
+          <!-- Station Sections (Passages / Poems + Questions) -->
+          ${station.sections.map(sec => `
+            <section class="space-y-4">
+              <!-- Source Material Box -->
+              ${sec.type === 'passage' ? `
+                <div class="bg-surface border border-borderWarm rounded-2xl p-5 sm:p-6 shadow-calm">
+                  <div class="flex items-center gap-2 text-xs font-bold text-accent mb-3 pb-2.5 border-b border-borderWarm/70">
+                    <i class="ph ph-article text-base"></i>
+                    <span>${sec.label}</span>
+                  </div>
+                  <p class="reading-passage text-bodyInk text-justify">${sec.text}</p>
+                </div>
+              ` : sec.type === 'poem' ? `
+                <div class="bg-surface border border-borderWarm rounded-2xl p-5 sm:p-6 shadow-calm">
+                  <div class="flex items-center gap-2 text-xs font-bold text-accent mb-4 pb-2.5 border-b border-borderWarm/70">
+                    <i class="ph ph-feather text-base"></i>
+                    <span>${sec.label}</span>
+                  </div>
+                  <div class="space-y-3 py-1">
+                    ${sec.verses.map(v => `
+                      <div class="poetry-line grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-6 text-ink bg-paper/80 border border-borderWarm/70 rounded-xl px-4 py-2.5">
+                        <div class="text-right">${v[0]}</div>
+                        <div class="text-left sm:text-right">${v[1]}</div>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              ` : `
+                <div class="flex items-center gap-2 text-sm font-bold text-ink pt-1">
+                  <i class="ph ph-list-checks text-accent text-lg"></i>
+                  <span>${sec.label}</span>
+                </div>
+              `}
+
+              <!-- Questions List -->
+              <div class="space-y-4">
+                ${sec.questions.map((q, qIdx) => renderQuestionCard(q, qIdx + 1)).join('')}
+              </div>
+            </section>
+          `).join('')}
+
+          <!-- Station 6 Interactive Writing, Calligraphy & Dictation Guides -->
+          ${station.writingGuides ? renderWritingGuides(station.writingGuides) : ''}
+
+          <!-- Complete Station Action Footer -->
+          <div class="bg-surface border border-borderWarm rounded-2xl p-5 shadow-calm flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-center sm:text-right">
+              <div class="font-heading text-xl font-bold text-ink">
+                ${stats.isCompleted ? 'أتممت هذه المحطة بنجاح' : 'هل انتهيت من مراجعة هذه المحطة؟'}
+              </div>
+              <p class="text-xs text-slateCalm mt-0.5">
+                ${nextStation ? `المحطة التالية: ${nextStation.title}` : 'هذه آخر محطة — يمكنك الآن خوض الاختبار الشامل.'}
+              </p>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-2.5 w-full sm:w-auto">
+              ${!stats.isCompleted ? `
+                <button
+                  onclick="completeCurrentStation(${station.id}, ${nextStation ? nextStation.id : 'null'})"
+                  class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-accent text-surface text-sm font-semibold hover:opacity-95 transition-opacity min-h-[48px]"
+                >
+                  <i class="ph ph-check-circle text-lg"></i>
+                  <span>${nextStation ? 'إتمام المحطة والانتقال للتالية' : 'إتمام المحطة الأخيرة'}</span>
+                </button>
+              ` : `
+                <button
+                  onclick="${nextStation ? `selectStation(${nextStation.id})` : `switchView('quiz')`}"
+                  class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-success text-surface text-sm font-semibold hover:opacity-95 transition-opacity min-h-[48px]"
+                >
+                  <span>${nextStation ? 'الانتقال للمحطة التالية' : 'الانتقال للاختبار الشامل'}</span>
+                  <i class="ph ph-arrow-left text-lg"></i>
+                </button>
+              `}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderQuestionCard(q, displayNum) {
+      const isBookmarked = state.bookmarks.includes(q.id);
+      const arabicLetters = ['أ', 'ب', 'ج', 'د'];
+
+      if (q.type === 'mcq') {
+        const chosen = state.mcqAnswers[q.id];
+        const answered = chosen !== undefined;
+        const isCorrect = answered && chosen === q.correctIndex;
+
+        return `
+          <article id="q-card-${q.id}" class="bg-surface border border-borderWarm rounded-2xl p-4 sm:p-5 shadow-calm space-y-4">
+            <div class="flex items-start justify-between gap-3">
+              <div class="flex items-start gap-2.5">
+                <span class="w-7 h-7 rounded-lg bg-accentSoft text-accent text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">${toArabicDigits(displayNum)}</span>
+                <h3 class="text-sm sm:text-base font-semibold text-ink leading-relaxed">${q.prompt}</h3>
+              </div>
+              <button
+                onclick="toggleBookmark('${q.id}')"
+                class="w-10 h-10 rounded-xl border shrink-0 flex items-center justify-center transition-colors ${
+                  isBookmarked
+                    ? 'bg-amberSoft border-amberAccent/35 text-amberAccent'
+                    : 'bg-paper border-borderWarm text-slateCalm hover:text-amberAccent'
+                }"
+                aria-label="حفظ السؤال للمراجعة"
+                title="${isBookmarked ? 'محفوظ للمراجعة' : 'حفظ للمراجعة'}"
+              >
+                <i class="ph ${isBookmarked ? 'ph-bookmark-simple ph-fill' : 'ph-bookmark-simple'} text-lg"></i>
+              </button>
+            </div>
+
+            <!-- Options Grid -->
+            <div class="grid grid-cols-1 gap-2.5">
+              ${q.options.map((opt, idx) => {
+                let btnStyle = 'bg-paper border-borderWarm text-bodyInk hover:border-accent/50 hover:bg-accentSoft/40';
+                let iconHtml = `<span class="w-7 h-7 rounded-lg bg-surface border border-borderWarm text-xs font-bold text-slateCalm flex items-center justify-center shrink-0">${arabicLetters[idx]}</span>`;
+
+                if (answered) {
+                  if (idx === q.correctIndex) {
+                    btnStyle = 'bg-successSoft border-success/45 text-success font-semibold';
+                    iconHtml = `<span class="w-7 h-7 rounded-lg bg-success text-surface text-xs font-bold flex items-center justify-center shrink-0"><i class="ph ph-check text-sm"></i></span>`;
+                  } else if (idx === chosen && idx !== q.correctIndex) {
+                    btnStyle = 'bg-dangerSoft border-danger/40 text-danger';
+                    iconHtml = `<span class="w-7 h-7 rounded-lg bg-danger text-surface text-xs font-bold flex items-center justify-center shrink-0"><i class="ph ph-x text-sm"></i></span>`;
+                  } else {
+                    btnStyle = 'bg-paper/60 border-borderWarm/60 text-slateCalm opacity-75';
+                  }
+                }
+
+                return `
+                  <button
+                    onclick="answerStationMcq('${q.id}', ${idx})"
+                    class="w-full text-right px-3.5 py-3 rounded-xl border transition-all flex items-center gap-3 min-h-[48px] ${btnStyle}"
+                  >
+                    ${iconHtml}
+                    <span class="text-sm leading-relaxed">${opt}</span>
+                  </button>
+                `;
+              }).join('')}
+            </div>
+
+            <!-- Instant Explanation -->
+            ${answered ? `
+              <div class="rounded-xl p-3.5 border text-sm leading-relaxed space-y-1 ${
+                isCorrect
+                  ? 'bg-successSoft/75 border-success/25 text-bodyInk'
+                  : 'bg-dangerSoft/75 border-danger/25 text-bodyInk'
+              }">
+                <div class="font-bold flex items-center gap-1.5 ${isCorrect ? 'text-success' : 'text-danger'}">
+                  <i class="ph ${isCorrect ? 'ph-check-circle' : 'ph-info'} text-base"></i>
+                  <span>${isCorrect ? 'إجابة صحيحة — أحسنت التركيز' : 'حاول مراجعة الفكرة — إليك التوضيح الصحيح'}</span>
+                </div>
+                <p class="text-xs sm:text-sm text-bodyInk/90">${q.explanation}</p>
+              </div>
+            ` : ''}
+          </article>
+        `;
+      }
+
+      // Essay / Open-ended Card
+      const isRevealed = !!state.revealedEssays[q.id];
+      const selfStatus = state.essayStatus[q.id];
+      const draftText = state.essayDrafts[q.id] || '';
+
+      return `
+        <article id="q-card-${q.id}" class="bg-surface border border-borderWarm rounded-2xl p-4 sm:p-5 shadow-calm space-y-4">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-start gap-2.5">
+              <span class="w-7 h-7 rounded-lg bg-amberSoft text-amberAccent text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">${toArabicDigits(displayNum)}</span>
+              <div class="space-y-1">
+                <span class="inline-block px-2 py-0.5 rounded-md bg-paper border border-borderWarm text-[11px] font-semibold text-slateCalm">${q.tag || 'مقالي'}</span>
+                <h3 class="text-sm sm:text-base font-semibold text-ink leading-relaxed">${q.prompt}</h3>
+              </div>
+            </div>
+            <button
+              onclick="toggleBookmark('${q.id}')"
+              class="w-10 h-10 rounded-xl border shrink-0 flex items-center justify-center transition-colors ${
+                isBookmarked
+                  ? 'bg-amberSoft border-amberAccent/35 text-amberAccent'
+                  : 'bg-paper border-borderWarm text-slateCalm hover:text-amberAccent'
+              }"
+              aria-label="حفظ السؤال للمراجعة"
+              title="${isBookmarked ? 'محفوظ للمراجعة' : 'حفظ للمراجعة'}"
+            >
+              <i class="ph ${isBookmarked ? 'ph-bookmark-simple ph-fill' : 'ph-bookmark-simple'} text-lg"></i>
+            </button>
+          </div>
+
+          <textarea
+            rows="2"
+            oninput="updateEssayDraft('${q.id}', this.value)"
+            placeholder="اكتب إجابتك هنا للتدريب (اختياري) أو فكّر فيها قبل عرض الإجابة النموذجية..."
+            class="w-full rounded-xl bg-paper border border-borderWarm px-3.5 py-2.5 text-sm text-bodyInk placeholder:text-slateCalm/70 resize-y focus:border-accent"
+          >${escapeHtml(draftText)}</textarea>
+
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <button
+              onclick="toggleRevealEssay('${q.id}')"
+              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-colors min-h-[44px] ${
+                isRevealed
+                  ? 'bg-paper border-borderWarm text-slateCalm hover:text-ink'
+                  : 'bg-accentSoft border-accent/20 text-accent hover:bg-accent hover:text-surface'
+              }"
+            >
+              <i class="ph ${isRevealed ? 'ph-eye-slash' : 'ph-eye'} text-base"></i>
+              <span>${isRevealed ? 'إخفاء الإجابة النموذجية' : 'عرض الإجابة النموذجية'}</span>
+            </button>
+
+            ${selfStatus ? `
+              <span class="inline-flex items-center gap-1 text-xs font-semibold ${selfStatus === 'known' ? 'text-success' : 'text-amberAccent'}">
+                <i class="ph ${selfStatus === 'known' ? 'ph-check-circle' : 'ph-clock-counter-clockwise'} text-sm"></i>
+                <span>${selfStatus === 'known' ? 'تم إتقانها' : 'مضافة للمراجعة'}</span>
+              </span>
+            ` : ''}
+          </div>
+
+          ${isRevealed ? `
+            <div class="rounded-xl bg-paper border border-accent/25 p-4 space-y-3.5">
+              <div>
+                <div class="text-xs font-bold text-accent mb-1 flex items-center gap-1.5">
+                  <i class="ph ph-seal-check text-sm"></i>
+                  <span>الإجابة النموذجية</span>
+                </div>
+                <p class="text-sm text-bodyInk leading-relaxed">${q.modelAnswer}</p>
+              </div>
+
+              <div class="pt-3 border-t border-borderWarm flex flex-wrap items-center gap-2">
+                <span class="text-xs text-slateCalm ml-1">قيّم إجابتك:</span>
+                <button
+                  onclick="setEssayStatus('${q.id}', 'known')"
+                  class="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold border min-h-[40px] transition-colors ${
+                    selfStatus === 'known'
+                      ? 'bg-success text-surface border-success'
+                      : 'bg-surface text-success border-success/30 hover:bg-successSoft'
+                  }"
+                >
+                  <i class="ph ph-check text-sm"></i>
+                  <span>أجبتها بنجاح</span>
+                </button>
+                <button
+                  onclick="setEssayStatus('${q.id}', 'review')"
+                  class="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold border min-h-[40px] transition-colors ${
+                    selfStatus === 'review'
+                      ? 'bg-amberAccent text-surface border-amberAccent'
+                      : 'bg-surface text-amberAccent border-amberAccent/35 hover:bg-amberSoft'
+                  }"
+                >
+                  <i class="ph ph-bookmark-simple text-sm"></i>
+                  <span>أحتاج مراجعتها</span>
+                </button>
+              </div>
+            </div>
+          ` : ''}
+        </article>
+      `;
+    }
+
+    function renderWritingGuides(guides) {
+      return `
+        <div class="space-y-6 pt-2">
+          <!-- Functional Report Card -->
+          <section class="bg-surface border border-borderWarm rounded-2xl p-5 sm:p-6 shadow-calm space-y-4">
+            <div class="flex items-center gap-2 text-xs font-bold text-accent">
+              <i class="ph ph-newspaper text-base"></i>
+              <span>${guides.functional.title}</span>
+            </div>
+            <p class="text-sm font-semibold text-ink bg-paper border border-borderWarm rounded-xl p-3.5">
+              الموضوع: ${guides.functional.topic}
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              ${guides.functional.blueprint.map((b, idx) => `
+                <div class="bg-paper/75 border border-borderWarm rounded-xl p-3.5">
+                  <div class="text-xs font-bold text-accent mb-1">${toArabicDigits(idx + 1)}. ${b.part}</div>
+                  <p class="text-xs sm:text-sm text-bodyInk leading-relaxed">${b.example}</p>
+                </div>
+              `).join('')}
+            </div>
+          </section>
+
+          <!-- 4 Persuasive Essay Topics Accordion -->
+          <section class="space-y-3">
+            <div class="flex items-center justify-between">
+              <h2 class="font-heading text-xl font-bold text-ink flex items-center gap-2">
+                <i class="ph ph-note-pencil text-accent text-xl shrink-0"></i>
+                <span>موضوعات النص الإقناعي الأربعة (١٥ – ٢٠ سطرًا)</span>
+              </h2>
+            </div>
+            <p class="text-xs text-slateCalm">اضغط على أي موضوع لعرض الحجج المنطقية والأمثلة الواقعية وعناصر الكتابة المقترحة.</p>
+
+            <div class="space-y-2.5">
+              ${guides.persuasiveTopics.map((t, i) => {
+                const isOpen = uiState.openWritingTopic === t.id;
+                return `
+                  <div class="bg-surface border border-borderWarm rounded-2xl overflow-hidden shadow-calm">
+                    <button
+                      onclick="toggleWritingTopic('${t.id}')"
+                      class="w-full px-4 sm:px-5 py-4 flex items-center justify-between gap-3 text-right min-h-[54px] hover:bg-paper/60 transition-colors"
+                    >
+                      <div class="flex items-center gap-3 min-w-0">
+                        <span class="w-7 h-7 rounded-lg bg-accentSoft text-accent text-xs font-bold flex items-center justify-center shrink-0">${toArabicDigits(i + 1)}</span>
+                        <div class="min-w-0">
+                          <div class="text-sm font-bold text-ink">${t.title}</div>
+                          <div class="text-[11px] text-slateCalm">${t.source}</div>
+                        </div>
+                      </div>
+                      <i class="ph ${isOpen ? 'ph-caret-up' : 'ph-caret-down'} text-lg text-slateCalm shrink-0"></i>
+                    </button>
+
+                    ${isOpen ? `
+                      <div class="px-4 sm:px-5 pb-5 pt-2 border-t border-borderWarm/70 space-y-3 text-sm">
+                        <div class="bg-paper rounded-xl p-3 border border-borderWarm/70">
+                          <span class="text-xs font-bold text-accent block mb-1">المقدمة:</span>
+                          <p class="text-bodyInk leading-relaxed">${t.intro}</p>
+                        </div>
+                        <div class="bg-paper rounded-xl p-3 border border-borderWarm/70">
+                          <span class="text-xs font-bold text-accent block mb-1.5">أهم الحجج المنطقية:</span>
+                          <ul class="space-y-1.5 text-bodyInk">
+                            ${t.arguments.map(arg => `
+                              <li class="flex items-start gap-2">
+                                <i class="ph ph-check text-success text-sm mt-1 shrink-0"></i>
+                                <span class="leading-relaxed">${arg}</span>
+                              </li>
+                            `).join('')}
+                          </ul>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          <div class="bg-amberSoft/60 rounded-xl p-3 border border-amberAccent/20">
+                            <span class="text-xs font-bold text-amberAccent block mb-1">أمثلة واقعية:</span>
+                            <p class="text-xs sm:text-sm text-bodyInk leading-relaxed">${t.examples}</p>
+                          </div>
+                          <div class="bg-successSoft/60 rounded-xl p-3 border border-success/20">
+                            <span class="text-xs font-bold text-success block mb-1">الخاتمة:</span>
+                            <p class="text-xs sm:text-sm text-bodyInk leading-relaxed">${t.conclusion}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ` : ''}
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </section>
+
+          <!-- Calligraphy & Dictation Card -->
+          <section class="bg-surface border border-borderWarm rounded-2xl p-5 sm:p-6 shadow-calm space-y-4">
+            <div class="flex items-center gap-2 font-heading text-xl font-bold text-ink">
+              <i class="ph ph-pen-nib text-accent text-xl shrink-0"></i>
+              <span>نماذج الخط العربي ونصائح الإملاء</span>
+            </div>
+
+            <div class="space-y-3">
+              ${guides.calligraphySamples.map(sample => `
+                <div class="bg-paper border border-borderWarm rounded-xl p-4">
+                  <div class="text-[11px] font-semibold text-slateCalm mb-2">${sample.source} — للتدريب بخط النسخ وخط الرقعة</div>
+                  <div class="poetry-line grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-6 text-ink font-bold">
+                    <div class="text-right">${sample.lines[0]}</div>
+                    <div class="text-left sm:text-right">${sample.lines[1]}</div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+
+            <div class="pt-3 border-t border-borderWarm/70">
+              <div class="text-xs font-bold text-amberAccent mb-2 flex items-center gap-1.5">
+                <i class="ph ph-lightbulb text-sm"></i>
+                <span>تنبيهات الإملاء (وصايا الحكماء)</span>
+              </div>
+              <ul class="space-y-1.5 text-xs sm:text-sm text-bodyInk">
+                ${guides.dictationTips.map(tip => `
+                  <li class="flex items-start gap-2">
+                    <i class="ph ph-dot-outline text-accent text-base mt-0.5 shrink-0"></i>
+                    <span class="leading-relaxed">${tip}</span>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    /* Station Interactions */
+    function selectStation(id) {
+      state.currentStationId = id;
+      saveState();
+      renderApp();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleGrammarSheet() {
+      uiState.grammarOpen = !uiState.grammarOpen;
+      renderApp();
+    }
+
+    function toggleWritingTopic(topicId) {
+      uiState.openWritingTopic = uiState.openWritingTopic === topicId ? null : topicId;
+      renderApp();
+    }
+
+    function answerStationMcq(qId, optionIdx) {
+      const q = ALL_QUESTIONS.find(item => item.id === qId);
+      if (!q) return;
+      state.mcqAnswers[qId] = optionIdx;
+      if (optionIdx === q.correctIndex) {
+        playCorrectSound();
+      } else {
+        playWrongSound();
+      }
+      saveState();
+      renderApp();
+    }
+
+    function updateEssayDraft(qId, value) {
+      state.essayDrafts[qId] = value;
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (e) {}
+    }
+
+    function toggleRevealEssay(qId) {
+      state.revealedEssays[qId] = !state.revealedEssays[qId];
+      saveState();
+      renderApp();
+    }
+
+    function setEssayStatus(qId, status) {
+      state.essayStatus[qId] = status;
+      if (status === 'known') {
+        playCorrectSound();
+        showToast('أحسنت — تم تسجيل إتقانك للسؤال', 'ph-check-circle');
+      } else {
+        showToast('تمت إضافة السؤال لقائمة المراجعة', 'ph-bookmark-simple');
+      }
+      saveState();
+      renderApp();
+    }
+
+    function toggleBookmark(qId) {
+      const idx = state.bookmarks.indexOf(qId);
+      if (idx >= 0) {
+        state.bookmarks.splice(idx, 1);
+        showToast('تمت الإزالة من المحفوظات', 'ph-bookmark-simple');
+      } else {
+        state.bookmarks.push(qId);
+        showToast('تم حفظ السؤال في بطاقات المراجعة', 'ph-bookmark-simple');
+      }
+      saveState();
+      renderApp();
+    }
+
+    function completeCurrentStation(stationId, nextId) {
+      if (!state.completedStations.includes(stationId)) {
+        state.completedStations.push(stationId);
+      }
+      playCompleteSound();
+      if (nextId) {
+        state.currentStationId = nextId;
+        showToast(`أتممت المحطة ${toArabicDigits(stationId)} — ننتقل إلى المحطة ${toArabicDigits(nextId)}`, 'ph-check-circle');
+      } else {
+        showToast('أتممت جميع المحطات بنجاح — أحسنت', 'ph-seal-check');
+      }
+      saveState();
+      renderApp();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    /* =========================================================================
+       8. VIEW 3: COMPREHENSIVE PRACTICE QUIZ (الاختبار الشامل)
+       ========================================================================= */
+    function renderQuizView() {
+      const qz = uiState.quiz;
+      const branches = ['الكل', 'القراءة', 'النصوص', 'النحو', 'التعبير والخط'];
+
+      // Setup Screen
+      if (!qz.started) {
+        const filteredCount = qz.branchFilter === 'الكل'
+          ? ALL_MCQS.length
+          : ALL_MCQS.filter(q => q.branch === qz.branchFilter).length;
+
+        return `
+          <div class="view-enter space-y-5">
+            <div class="relative overflow-hidden bg-surface border border-borderWarm rounded-2xl p-5 sm:p-7 shadow-calm space-y-5">
+              ${buildMoroccanWatermarkSvg('quiz-head-geo', '#1A2351', '0.035')}
+              <div class="relative z-10 space-y-5">
+                <div>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accentSoft text-accent text-xs font-semibold mb-2">
+                    <i class="ph ph-exam text-sm"></i>
+                    <span>تدريب شامل بدون أسئلة مكررة</span>
+                  </span>
+                  <h1 class="font-heading text-2xl sm:text-3xl font-bold text-ink">الاختبار الشامل التفاعلي</h1>
+                  <p class="text-sm text-slateCalm mt-1 leading-relaxed">
+                    يجمع كل أسئلة الاختيار من متعدد الفريدة من النموذجين الاسترشاديين (${toArabicDigits(ALL_MCQS.length)} سؤالًا). اختر الفرع والنمط المناسب لتركيزك.
+                  </p>
+                </div>
+
+                <!-- Branch Filter Pills -->
+                <div class="space-y-2">
+                  <label class="text-xs font-bold text-ink block">اختر الفرع:</label>
+                  <div class="flex flex-wrap gap-2">
+                    ${branches.map(b => {
+                      const count = b === 'الكل' ? ALL_MCQS.length : ALL_MCQS.filter(q => q.branch === b).length;
+                      const active = qz.branchFilter === b;
+                      return `
+                        <button
+                          onclick="setQuizFilter('${b}')"
+                          class="px-3.5 py-2 rounded-xl text-xs font-semibold border transition-colors min-h-[42px] ${
+                            active
+                              ? 'bg-accent text-surface border-accent'
+                              : 'bg-paper text-slateCalm border-borderWarm hover:text-ink'
+                          }"
+                        >
+                          ${b} (${toArabicDigits(count)})
+                        </button>
+                      `;
+                    }).join('')}
+                  </div>
+                </div>
+
+                <!-- Mode & Timer Options -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                  <div class="bg-paper border border-borderWarm rounded-xl p-3.5 space-y-2">
+                    <div class="text-xs font-bold text-ink">نمط التصحيح</div>
+                    <div class="grid grid-cols-2 gap-1.5">
+                      <button onclick="setQuizOption('instantMode', true)" class="py-2 px-2.5 rounded-lg text-xs font-semibold border transition-colors ${qz.instantMode ? 'bg-accentSoft text-accent border-accent/30' : 'bg-surface text-slateCalm border-borderWarm'}">تصحيح فوري</button>
+                      <button onclick="setQuizOption('instantMode', false)" class="py-2 px-2.5 rounded-lg text-xs font-semibold border transition-colors ${!qz.instantMode ? 'bg-accentSoft text-accent border-accent/30' : 'bg-surface text-slateCalm border-borderWarm'}">في النهاية</button>
+                    </div>
+                  </div>
+
+                  <div class="bg-paper border border-borderWarm rounded-xl p-3.5 space-y-2">
+                    <div class="text-xs font-bold text-ink">المؤقت الزمني</div>
+                    <div class="grid grid-cols-2 gap-1.5">
+                      <button onclick="setQuizOption('useTimer', false)" class="py-2 px-2.5 rounded-lg text-xs font-semibold border transition-colors ${!qz.useTimer ? 'bg-accentSoft text-accent border-accent/30' : 'bg-surface text-slateCalm border-borderWarm'}">بدون مؤقت</button>
+                      <button onclick="setQuizOption('useTimer', true)" class="py-2 px-2.5 rounded-lg text-xs font-semibold border transition-colors ${qz.useTimer ? 'bg-accentSoft text-accent border-accent/30' : 'bg-surface text-slateCalm border-borderWarm'}">تفعيل المؤقت</button>
+                    </div>
+                  </div>
+                </div>
+
+                ${state.quizBestPercent !== null ? `
+                  <div class="flex items-center gap-2 text-xs text-success bg-successSoft/80 border border-success/20 rounded-xl px-3.5 py-2.5">
+                    <i class="ph ph-medal text-base"></i>
+                    <span>أعلى نتيجة حققتها سابقًا: <strong>${state.quizBestPercent}%</strong></span>
+                  </div>
+                ` : ''}
+
+                <button
+                  onclick="startQuiz()"
+                  class="w-full py-3.5 px-5 rounded-xl bg-accent text-surface text-sm font-bold hover:opacity-95 transition-opacity inline-flex items-center justify-center gap-2 min-h-[50px]"
+                >
+                  <i class="ph ph-play text-lg"></i>
+                  <span>ابدأ الاختبار الآن (${toArabicDigits(filteredCount)} سؤالًا)</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Finished Summary Screen
+      if (qz.finished) {
+        const total = qz.questions.length;
+        let correctCount = 0;
+        const missedQuestions = [];
+        const branchStats = {};
+
+        qz.questions.forEach(q => {
+          if (!branchStats[q.branch]) branchStats[q.branch] = { total: 0, correct: 0 };
+          branchStats[q.branch].total++;
+          if (qz.answers[q.id] === q.correctIndex) {
+            correctCount++;
+            branchStats[q.branch].correct++;
+          } else {
+            missedQuestions.push(q);
+          }
+        });
+
+        const pct = total > 0 ? Math.round((correctCount / total) * 100) : 0;
+
+        return `
+          <div class="view-enter space-y-5">
+            <div class="bg-surface border border-borderWarm rounded-2xl p-6 shadow-calm text-center space-y-4">
+              <div class="w-14 h-14 mx-auto rounded-2xl ${pct >= 80 ? 'bg-successSoft text-success' : 'bg-accentSoft text-accent'} flex items-center justify-center">
+                <i class="ph ${pct >= 80 ? 'ph-seal-check' : 'ph-chart-bar'} text-3xl"></i>
+              </div>
+              <div>
+                <h2 class="font-heading text-2xl sm:text-3xl font-bold text-ink">ملخص نتيجة الاختبار</h2>
+                <p class="text-sm text-slateCalm mt-1">
+                  ${pct >= 85 ? 'أداء متميز وتركيز عالٍ — أحسنت.' : pct >= 65 ? 'مستوى جيد جدًا، مراجعة الأخطاء سترفع نتيجتك للدرجة النهائية.' : 'بداية طيبة، راجع الأسئلة التي أخطأت فيها وجرّب مرة أخرى.'}
+                </p>
+              </div>
+
+              <div class="flex items-center justify-center gap-6 py-3">
+                <div>
+                  <div class="text-3xl font-bold text-accent tabular-nums">${pct}%</div>
+                  <div class="text-xs text-slateCalm">النسبة المئوية</div>
+                </div>
+                <div class="w-px h-10 bg-borderWarm"></div>
+                <div>
+                  <div class="text-3xl font-bold text-ink tabular-nums">${correctCount} / ${total}</div>
+                  <div class="text-xs text-slateCalm">إجابات صحيحة</div>
+                </div>
+                ${qz.useTimer ? `
+                  <div class="w-px h-10 bg-borderWarm"></div>
+                  <div>
+                    <div class="text-2xl font-bold text-ink tabular-nums">${formatTime(qz.secondsElapsed)}</div>
+                    <div class="text-xs text-slateCalm">الوقت المستغرق</div>
+                  </div>
+                ` : ''}
+              </div>
+
+              <!-- Branch Breakdown -->
+              <div class="text-right bg-paper border border-borderWarm rounded-xl p-4 space-y-2.5">
+                <div class="text-xs font-bold text-ink mb-1">تفصيل الأداء حسب الفرع</div>
+                ${Object.entries(branchStats).map(([branch, bStat]) => {
+                  const bPct = Math.round((bStat.correct / bStat.total) * 100);
+                  return `
+                    <div class="space-y-1">
+                      <div class="flex items-center justify-between text-xs">
+                        <span class="font-semibold text-ink">${branch}</span>
+                        <span class="text-slateCalm tabular-nums">${bStat.correct} / ${bStat.total} (${bPct}%)</span>
+                      </div>
+                      <div class="w-full h-2 bg-borderWarm/70 rounded-full overflow-hidden">
+                        <div class="h-full ${bPct >= 75 ? 'bg-success' : 'bg-accent'} rounded-full" style="width: ${bPct}%"></div>
+                      </div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+
+              <div class="flex flex-wrap items-center justify-center gap-2.5 pt-2">
+                ${missedQuestions.length > 0 ? `
+                  <button
+                    onclick="retryMissedQuiz()"
+                    class="flex-1 sm:flex-none px-5 py-3 rounded-xl bg-amberAccent text-surface text-sm font-semibold hover:opacity-95 min-h-[48px] inline-flex items-center justify-center gap-2"
+                  >
+                    <i class="ph ph-arrows-clockwise text-base"></i>
+                    <span>إعادة التدريب على الأخطاء (${toArabicDigits(missedQuestions.length)})</span>
+                  </button>
+                ` : ''}
+                <button
+                  onclick="resetQuizToSetup()"
+                  class="flex-1 sm:flex-none px-5 py-3 rounded-xl bg-paper border border-borderWarm text-ink hover:bg-accentSoft hover:text-accent text-sm font-semibold min-h-[48px]"
+                >
+                  اختبار جديد
+                </button>
+              </div>
+            </div>
+
+            <!-- Review Missed Questions List -->
+            ${missedQuestions.length > 0 ? `
+              <div class="space-y-3">
+                <h3 class="font-heading text-xl font-bold text-ink">مراجعة الأسئلة التي تحتاج تركيزًا</h3>
+                ${missedQuestions.map((q, idx) => `
+                  <div class="bg-surface border border-borderWarm rounded-2xl p-4 shadow-calm space-y-2">
+                    <div class="text-[11px] font-semibold text-slateCalm">${q.source}</div>
+                    <div class="text-sm font-bold text-ink">${toArabicDigits(idx + 1)}. ${q.prompt}</div>
+                    <div class="text-xs text-danger">إجابتك: ${qz.answers[q.id] !== undefined ? q.options[qz.answers[q.id]] : 'لم تُجب'}</div>
+                    <div class="text-xs font-semibold text-success">الإجابة الصحيحة: ${q.options[q.correctIndex]}</div>
+                    <p class="text-xs text-slateCalm bg-paper rounded-lg p-2.5 border border-borderWarm/70">${q.explanation}</p>
+                  </div>
+                `).join('')}
+              </div>
+            ` : ''}
+          </div>
+        `;
+      }
+
+      // Active Quiz Question Screen
+      const q = qz.questions[qz.currentIndex];
+      const chosen = qz.answers[q.id];
+      const answered = chosen !== undefined;
+      const showValidation = qz.instantMode && answered;
+      const isCorrect = answered && chosen === q.correctIndex;
+      const arabicLetters = ['أ', 'ب', 'ج', 'د'];
+      const progressPct = Math.round(((qz.currentIndex + 1) / qz.questions.length) * 100);
+
+      return `
+        <div class="view-enter space-y-4">
+          <!-- Quiz Top Status Bar -->
+          <div class="bg-surface border border-borderWarm rounded-2xl p-4 shadow-calm space-y-2.5">
+            <div class="flex items-center justify-between gap-2 text-xs font-semibold">
+              <span class="text-ink">السؤال ${toArabicDigits(qz.currentIndex + 1)} من ${toArabicDigits(qz.questions.length)}</span>
+              <div class="flex items-center gap-3">
+                ${qz.useTimer ? `<span id="quiz-timer-display" class="inline-flex items-center gap-1 text-accent tabular-nums"><i class="ph ph-timer text-sm"></i> ${formatTime(qz.secondsElapsed)}</span>` : ''}
+                <button onclick="resetQuizToSetup()" class="text-slateCalm hover:text-danger">إنهاء</button>
+              </div>
+            </div>
+            <div class="w-full h-2 bg-borderWarm/70 rounded-full overflow-hidden">
+              <div class="h-full bg-accent rounded-full transition-all duration-300" style="width: ${progressPct}%"></div>
+            </div>
+          </div>
+
+          <!-- Current Question Card -->
+          <div class="bg-surface border border-borderWarm rounded-2xl p-5 sm:p-6 shadow-calm space-y-5">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-2.5 py-1 rounded-lg bg-accentSoft text-accent text-xs font-semibold">${q.branch}</span>
+              <span class="text-xs text-slateCalm">${q.source}</span>
+            </div>
+
+            <h2 class="text-base sm:text-lg font-bold text-ink leading-relaxed">${q.prompt}</h2>
+
+            <div class="space-y-2.5">
+              ${q.options.map((opt, idx) => {
+                let cls = 'bg-paper border-borderWarm text-bodyInk hover:border-accent/50';
+                let badge = `<span class="w-7 h-7 rounded-lg bg-surface border border-borderWarm text-xs font-bold text-slateCalm flex items-center justify-center shrink-0">${arabicLetters[idx]}</span>`;
+
+                if (showValidation) {
+                  if (idx === q.correctIndex) {
+                    cls = 'bg-successSoft border-success/45 text-success font-semibold';
+                    badge = `<span class="w-7 h-7 rounded-lg bg-success text-surface flex items-center justify-center shrink-0"><i class="ph ph-check text-sm"></i></span>`;
+                  } else if (idx === chosen && idx !== q.correctIndex) {
+                    cls = 'bg-dangerSoft border-danger/40 text-danger';
+                    badge = `<span class="w-7 h-7 rounded-lg bg-danger text-surface flex items-center justify-center shrink-0"><i class="ph ph-x text-sm"></i></span>`;
+                  } else {
+                    cls = 'bg-paper/60 border-borderWarm/60 text-slateCalm opacity-70';
+                  }
+                } else if (chosen === idx) {
+                  cls = 'bg-accentSoft border-accent text-accent font-semibold';
+                  badge = `<span class="w-7 h-7 rounded-lg bg-accent text-surface text-xs font-bold flex items-center justify-center shrink-0">${arabicLetters[idx]}</span>`;
+                }
+
+                return `
+                  <button
+                    onclick="selectQuizAnswer('${q.id}', ${idx})"
+                    class="w-full text-right px-4 py-3 rounded-xl border transition-all flex items-center gap-3 min-h-[50px] ${cls}"
+                  >
+                    ${badge}
+                    <span class="text-sm leading-relaxed">${opt}</span>
+                  </button>
+                `;
+              }).join('')}
+            </div>
+
+            ${showValidation ? `
+              <div class="rounded-xl p-3.5 border text-sm leading-relaxed space-y-1 ${isCorrect ? 'bg-successSoft/75 border-success/25' : 'bg-dangerSoft/75 border-danger/25'}">
+                <div class="font-bold flex items-center gap-1.5 ${isCorrect ? 'text-success' : 'text-danger'}">
+                  <i class="ph ${isCorrect ? 'ph-check-circle' : 'ph-info'} text-base"></i>
+                  <span>${isCorrect ? 'إجابة صحيحة — أحسنت التركيز' : 'إجابة غير دقيقة — راجع التوضيح أدناه'}</span>
+                </div>
+                <p class="text-xs sm:text-sm text-bodyInk">${q.explanation}</p>
+              </div>
+            ` : ''}
+
+            <!-- Quiz Navigation Controls -->
+            <div class="pt-3 border-t border-borderWarm flex items-center justify-between gap-3">
+              <button
+                onclick="moveQuizQuestion(-1)"
+                ${qz.currentIndex === 0 ? 'disabled' : ''}
+                class="px-4 py-2.5 rounded-xl border border-borderWarm bg-paper text-sm font-semibold text-ink disabled:opacity-40 min-h-[44px] inline-flex items-center gap-1.5"
+              >
+                <i class="ph ph-arrow-right"></i>
+                <span>السابق</span>
+              </button>
+
+              ${qz.currentIndex < qz.questions.length - 1 ? `
+                <button
+                  onclick="moveQuizQuestion(1)"
+                  class="px-5 py-2.5 rounded-xl bg-accent text-surface text-sm font-semibold hover:opacity-95 min-h-[44px] inline-flex items-center gap-1.5"
+                >
+                  <span>التالي</span>
+                  <i class="ph ph-arrow-left"></i>
+                </button>
+              ` : `
+                <button
+                  onclick="finishQuiz()"
+                  class="px-5 py-2.5 rounded-xl bg-success text-surface text-sm font-semibold hover:opacity-95 min-h-[44px] inline-flex items-center gap-1.5"
+                >
+                  <i class="ph ph-check-circle"></i>
+                  <span>عرض النتيجة</span>
+                </button>
+              `}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function setQuizFilter(branch) {
+      uiState.quiz.branchFilter = branch;
+      renderApp();
+    }
+
+    function setQuizOption(key, val) {
+      uiState.quiz[key] = val;
+      renderApp();
+    }
+
+    function startQuiz(customQuestions = null) {
+      const qz = uiState.quiz;
+      const pool = customQuestions || (qz.branchFilter === 'الكل'
+        ? [...ALL_MCQS]
+        : ALL_MCQS.filter(q => q.branch === qz.branchFilter));
+
+      qz.questions = pool;
+      qz.answers = {};
+      qz.currentIndex = 0;
+      qz.started = true;
+      qz.finished = false;
+      qz.secondsElapsed = 0;
+
+      if (qz.timerInterval) clearInterval(qz.timerInterval);
+      if (qz.useTimer) {
+        qz.timerInterval = setInterval(() => {
+          qz.secondsElapsed++;
+          const el = document.getElementById('quiz-timer-display');
+          if (el) el.innerHTML = `<i class="ph ph-timer text-sm"></i> ${formatTime(qz.secondsElapsed)}`;
+        }, 1000);
+      }
+
+      renderApp();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function selectQuizAnswer(qId, idx) {
+      const qz = uiState.quiz;
+      if (qz.instantMode && qz.answers[qId] !== undefined) return;
+      qz.answers[qId] = idx;
+      const q = qz.questions.find(item => item.id === qId);
+      if (qz.instantMode && q) {
+        if (idx === q.correctIndex) playCorrectSound();
+        else playWrongSound();
+      }
+      renderApp();
+    }
+
+    function moveQuizQuestion(delta) {
+      const qz = uiState.quiz;
+      const next = qz.currentIndex + delta;
+      if (next >= 0 && next < qz.questions.length) {
+        qz.currentIndex = next;
+        renderApp();
+      }
+    }
+
+    function finishQuiz() {
+      const qz = uiState.quiz;
+      if (qz.timerInterval) {
+        clearInterval(qz.timerInterval);
+        qz.timerInterval = null;
+      }
+      qz.finished = true;
+
+      let correct = 0;
+      qz.questions.forEach(q => {
+        if (qz.answers[q.id] === q.correctIndex) correct++;
+      });
+      const pct = Math.round((correct / qz.questions.length) * 100);
+      if (state.quizBestPercent === null || pct > state.quizBestPercent) {
+        state.quizBestPercent = pct;
+        saveState();
+      }
+      playCompleteSound();
+      renderApp();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function retryMissedQuiz() {
+      const qz = uiState.quiz;
+      const missed = qz.questions.filter(q => qz.answers[q.id] !== q.correctIndex);
+      if (missed.length > 0) startQuiz(missed);
+    }
+
+    function resetQuizToSetup() {
+      const qz = uiState.quiz;
+      if (qz.timerInterval) {
+        clearInterval(qz.timerInterval);
+        qz.timerInterval = null;
+      }
+      qz.started = false;
+      qz.finished = false;
+      renderApp();
+    }
+
+    function formatTime(sec) {
+      const m = Math.floor(sec / 60).toString().padStart(2, '0');
+      const s = (sec % 60).toString().padStart(2, '0');
+      return `${m}:${s}`;
+    }
+
+    /* =========================================================================
+       9. VIEW 4: COLORFUL 3D FLASHCARDS (DECK & GRID) + BOOKMARKS
+       ========================================================================= */
+    function renderReviewView() {
+      const savedIds = getSavedReviewIds();
+
+      return `
+        <div class="view-enter space-y-5">
+          <!-- Sub-tab Toggle -->
+          <div class="grid grid-cols-2 gap-1.5 p-1 bg-surface border border-borderWarm rounded-2xl shadow-calm">
+            <button
+              onclick="setReviewSubTab('flashcards')"
+              class="py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-colors flex items-center justify-center gap-2 min-h-[44px] ${
+                uiState.reviewSubTab === 'flashcards' ? 'bg-accentSoft text-accent' : 'text-slateCalm hover:text-ink'
+              }"
+            >
+              <i class="ph ph-cards text-base"></i>
+              <span>بطاقات المفردات والقواعد</span>
+            </button>
+            <button
+              onclick="setReviewSubTab('bookmarks')"
+              class="py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-colors flex items-center justify-center gap-2 min-h-[44px] ${
+                uiState.reviewSubTab === 'bookmarks' ? 'bg-amberSoft text-amberAccent' : 'text-slateCalm hover:text-ink'
+              }"
+            >
+              <i class="ph ph-bookmark-simple text-base"></i>
+              <span>الأسئلة المحفوظة (${toArabicDigits(savedIds.length)})</span>
+            </button>
+          </div>
+
+          ${uiState.reviewSubTab === 'flashcards' ? renderFlashcardsPanel() : renderBookmarksPanel(savedIds)}
+        </div>
+      `;
+    }
+
+    function getOrderedFlashcards() {
+      const map = new Map(FLASHCARDS.map(c => [c.id, c]));
+      const ordered = uiState.flashcardOrder.map(id => map.get(id)).filter(Boolean);
+      FLASHCARDS.forEach(c => {
+        if (!ordered.includes(c)) ordered.push(c);
+      });
+      return ordered;
+    }
+
+    function getFilteredFlashcards() {
+      const ordered = getOrderedFlashcards();
+      if (uiState.flashcardFilter === 'all') return ordered;
+      if (uiState.flashcardFilter === 'review') {
+        return ordered.filter(c => state.flashcardStatus[c.id] === 'review');
+      }
+      return ordered.filter(c => c.theme === uiState.flashcardFilter);
+    }
+
+    function getFilterCount(filterKey) {
+      if (filterKey === 'all') return FLASHCARDS.length;
+      if (filterKey === 'review') return FLASHCARDS.filter(c => state.flashcardStatus[c.id] === 'review').length;
+      return FLASHCARDS.filter(c => c.theme === filterKey).length;
+    }
+
+    function renderFlashcardsPanel() {
+      const cards = getFilteredFlashcards();
+      const knownCount = FLASHCARDS.filter(c => state.flashcardStatus[c.id] === 'known').length;
+      const reviewCount = FLASHCARDS.filter(c => state.flashcardStatus[c.id] === 'review').length;
+      const masteredPct = Math.round((knownCount / FLASHCARDS.length) * 100);
+
+      if (uiState.flashcardIndex >= cards.length) uiState.flashcardIndex = 0;
+
+      const filterDefs = [
+        { key: 'all',        label: 'الكل',                           dot: '#1A2351' },
+        { key: 'synonym',    label: FLASHCARD_THEMES.synonym.label,    dot: FLASHCARD_THEMES.synonym.accent },
+        { key: 'antonym',    label: FLASHCARD_THEMES.antonym.label,    dot: FLASHCARD_THEMES.antonym.accent },
+        { key: 'morphology', label: FLASHCARD_THEMES.morphology.label, dot: FLASHCARD_THEMES.morphology.accent },
+        { key: 'rhetoric',   label: FLASHCARD_THEMES.rhetoric.label,   dot: FLASHCARD_THEMES.rhetoric.accent },
+        { key: 'grammar',    label: FLASHCARD_THEMES.grammar.label,    dot: FLASHCARD_THEMES.grammar.accent },
+        { key: 'review',     label: 'للمراجعة',                       dot: '#C2410C' }
+      ];
+
+      return `
+        <div class="space-y-4">
+          <!-- Flashcards Control Header -->
+          <div class="bg-surface border border-borderWarm rounded-2xl p-4 shadow-calm space-y-3.5">
+            <!-- Title + Mode Toggle -->
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <h2 class="font-heading text-2xl font-bold text-ink">بطاقات المعاني والمفردات والقواعد</h2>
+                <p id="fc-mastery-summary" class="text-xs text-slateCalm mt-0.5">
+                  حفظت <strong class="text-success">${toArabicDigits(knownCount)}</strong> من ${toArabicDigits(FLASHCARDS.length)} بطاقة
+                  ${reviewCount > 0 ? ` • <strong class="text-amberAccent">${toArabicDigits(reviewCount)}</strong> للمراجعة` : ''}
+                </p>
+              </div>
+
+              <!-- Seamless Toggle: 3D Deck Mode vs Colorful Grid Mode -->
+              <div class="inline-flex p-1 bg-paper border border-borderWarm rounded-xl shrink-0" role="group" aria-label="تبديل نمط عرض البطاقات">
+                <button
+                  onclick="setFlashcardMode('flip')"
+                  class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition-colors min-h-[38px] ${
+                    uiState.flashcardMode === 'flip'
+                      ? 'bg-accent text-surface'
+                      : 'text-slateCalm hover:text-ink'
+                  }"
+                >
+                  <i class="ph ph-cards text-sm"></i>
+                  <span>وضع التقليب</span>
+                </button>
+                <button
+                  onclick="setFlashcardMode('grid')"
+                  class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition-colors min-h-[38px] ${
+                    uiState.flashcardMode === 'grid'
+                      ? 'bg-accent text-surface'
+                      : 'text-slateCalm hover:text-ink'
+                  }"
+                >
+                  <i class="ph ph-squares-four text-sm"></i>
+                  <span>الشبكة الملونة</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Category Filter Pills with Colored Dots & Counts -->
+            <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-0.5 pt-2.5 border-t border-borderWarm/70">
+              ${filterDefs.map(f => {
+                const cnt = getFilterCount(f.key);
+                const active = uiState.flashcardFilter === f.key;
+                const theme = FLASHCARD_THEMES[f.key];
+                const activeBg = active ? (theme ? theme.accent : '#1A2351') : '#FAF7F0';
+                const activeBorder = active ? (theme ? theme.accent : '#1A2351') : '#E6DFD1';
+                return `
+                  <button
+                    onclick="setFlashcardFilter('${f.key}')"
+                    class="shrink-0 px-3 py-1.5 rounded-xl text-xs font-semibold border transition-colors min-h-[38px] inline-flex items-center gap-1.5"
+                    style="background-color: ${activeBg}; border-color: ${activeBorder}; color: ${active ? '#FFFFFF' : '#1A2351'};"
+                  >
+                    <span class="w-2 h-2 rounded-full shrink-0" style="background-color: ${active ? '#FFFFFF' : f.dot};"></span>
+                    <span>${f.label}</span>
+                    <span class="px-1.5 py-0.5 rounded-md text-[10px] font-bold" style="background-color: ${active ? 'rgba(255,255,255,0.22)' : '#FFFFFF'}; color: ${active ? '#FFFFFF' : '#596377'}; border: ${active ? 'none' : '1px solid #E6DFD1'};">
+                      ${toArabicDigits(cnt)}
+                    </span>
+                  </button>
+                `;
+              }).join('')}
+            </div>
+
+            ${uiState.flashcardMode === 'grid' && cards.length > 0 ? `
+              <div class="flex items-center justify-between pt-2 border-t border-borderWarm/60 text-xs">
+                <span class="text-slateCalm">اضغط على أي بطاقة لتقليبها بحركة ثلاثية الأبعاد</span>
+                <button
+                  id="grid-flip-all-btn"
+                  onclick="toggleAllGridCards()"
+                  class="font-semibold text-accent hover:underline inline-flex items-center gap-1.5 py-1"
+                >
+                  <i class="ph ph-arrows-clockwise text-sm"></i>
+                  <span>${areAllGridCardsFlipped(cards) ? 'إعادة كل البطاقات' : 'قلب كل البطاقات'}</span>
+                </button>
+              </div>
+            ` : ''}
+          </div>
+
+          ${cards.length === 0 ? `
+            <div class="bg-surface border border-borderWarm rounded-2xl p-8 text-center space-y-2.5 shadow-calm">
+              <div class="w-12 h-12 mx-auto rounded-2xl bg-successSoft text-success flex items-center justify-center">
+                <i class="ph ph-check-circle text-2xl"></i>
+              </div>
+              <div class="font-heading text-2xl font-bold text-ink">لا توجد بطاقات مؤجلة للمراجعة</div>
+              <p class="text-xs sm:text-sm text-slateCalm">يمكنك العودة لعرض كل البطاقات لتثبيت الحفظ.</p>
+              <button onclick="setFlashcardFilter('all')" class="mt-2 px-4 py-2.5 rounded-xl bg-accentSoft text-accent text-xs font-semibold min-h-[40px]">عرض كل البطاقات</button>
+            </div>
+          ` : (uiState.flashcardMode === 'flip' ? renderDeckFlipMode(cards, masteredPct) : renderColoredGridMode(cards))}
+        </div>
+      `;
+    }
+
+    /* ==================== MODE A: PHYSICAL 3D STACKED DECK MODE ==================== */
+    function renderDeckFlipMode(cards, masteredPct) {
+      const card = cards[uiState.flashcardIndex];
+      const theme = FLASHCARD_THEMES[card.theme] || FLASHCARD_THEMES.synonym;
+      const cardStatus = state.flashcardStatus[card.id];
+
+      // Peeking background layers use the pastel colors of the upcoming cards
+      const nextCard1 = cards.length > 1 ? cards[(uiState.flashcardIndex + 1) % cards.length] : null;
+      const nextCard2 = cards.length > 2 ? cards[(uiState.flashcardIndex + 2) % cards.length] : null;
+      const nextTheme1 = nextCard1 ? (FLASHCARD_THEMES[nextCard1.theme] || theme) : theme;
+      const nextTheme2 = nextCard2 ? (FLASHCARD_THEMES[nextCard2.theme] || theme) : theme;
+
+      const statusBadgeHtml = cardStatus === 'known'
+        ? `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-successSoft text-success border border-success/25 text-[11px] font-bold"><i class="ph ph-check-circle text-xs"></i> محفوظة</span>`
+        : cardStatus === 'review'
+          ? `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amberSoft text-amberAccent border border-amberAccent/30 text-[11px] font-bold"><i class="ph ph-clock-counter-clockwise text-xs"></i> للمراجعة</span>`
+          : '';
+
+      const enterAnimClass = uiState.deckEnterAnim || '';
+      uiState.deckEnterAnim = '';
+
+      return `
+        <div class="space-y-6">
+          <!-- Stacked Physical 3D Deck Container (Touch Swipeable) -->
+          <div
+            id="deck-stack-wrapper"
+            class="relative pb-6 pl-4 sm:pl-6"
+            ontouchstart="handleDeckTouchStart(event)"
+            ontouchend="handleDeckTouchEnd(event)"
+          >
+            <!-- Stacked Card Layer 2 -->
+            ${nextCard2 ? `
+              <div
+                id="deck-stack-2"
+                class="deck-stack-layer deck-stack-2 shadow-calm"
+                style="background-color: ${nextTheme2.bg}; border: 1.5px solid ${nextTheme2.border}; opacity: 0.78;"
+              ></div>
+            ` : ''}
+
+            <!-- Stacked Card Layer 1 -->
+            ${nextCard1 ? `
+              <div
+                id="deck-stack-1"
+                class="deck-stack-layer deck-stack-1 shadow-calm"
+                style="background-color: ${nextTheme1.bg}; border: 1.5px solid ${nextTheme1.border}; opacity: 0.94;"
+              ></div>
+            ` : ''}
+
+            <!-- Active 3D Flip Stage -->
+            <div id="deck-active-stage" class="deck-stage-active flip-scene ${enterAnimClass}">
+              <div id="deck-flip-lift" class="flip-lift-wrap">
+                <div
+                  id="deck-flip-card"
+                  onclick="flipCurrentCard()"
+                  role="button"
+                  tabindex="0"
+                  aria-label="اضغط لقلب البطاقة وعرض الإجابة"
+                  class="flip-card shadow-calm ${uiState.flashcardFlipped ? 'is-flipped' : ''}"
+                >
+                  <!-- FRONT FACE -->
+                  <div
+                    class="flip-face flip-front flex flex-col justify-between"
+                    style="background-color: ${theme.bg}; border: 2px solid ${theme.border};"
+                  >
+                    <!-- Colored Top Accent Strip -->
+                    <div class="h-1.5 w-full shrink-0" style="background-color: ${theme.accent};"></div>
+
+                    <!-- Subtle Moroccan Geometric Watermark Inside Card -->
+                    ${buildMoroccanWatermarkSvg(`deck-front-geo-${card.id}`, theme.accent, '0.055')}
+                    ${buildMoroccanCornerStar(theme.accent, 'bottom-3 left-3', '0.11')}
+
+                    <div class="relative z-10 p-5 sm:p-6 flex-1 flex flex-col justify-between gap-4">
+                      <!-- Top Row -->
+                      <div class="flex flex-wrap items-center justify-between gap-2">
+                        <div class="flex items-center gap-2">
+                          <span
+                            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold text-surface"
+                            style="background-color: ${theme.accent};"
+                          >
+                            <i class="ph ${theme.icon} text-sm"></i>
+                            <span>${theme.label}</span>
+                          </span>
+                          ${statusBadgeHtml}
+                        </div>
+
+                        <span
+                          class="text-xs font-bold px-2.5 py-1 rounded-lg bg-surface tabular-nums"
+                          style="border: 1px solid ${theme.border}; color: ${theme.darkText};"
+                        >
+                          ${toArabicDigits(uiState.flashcardIndex + 1)} / ${toArabicDigits(cards.length)}
+                        </span>
+                      </div>
+
+                      <!-- Centerpiece Term in Maghrebi Calligraphic Font -->
+                      <div class="text-center py-4 sm:py-5 space-y-2.5">
+                        <div class="font-heading text-3xl sm:text-4xl font-bold text-ink leading-snug px-2">
+                          ${card.front}
+                        </div>
+                        ${buildAndalusianDivider(theme.accent)}
+                        <div
+                          class="inline-flex items-center gap-1.5 text-xs font-semibold bg-surface/95 rounded-full px-3.5 py-1.5"
+                          style="border: 1px solid ${theme.border}; color: ${theme.darkText};"
+                        >
+                          <i class="ph ph-book-bookmark text-xs" style="color: ${theme.accent};"></i>
+                          <span>${card.subtitle}</span>
+                        </div>
+                      </div>
+
+                      <!-- Tap-to-Flip Cue -->
+                      <div
+                        class="rounded-xl py-2.5 px-4 text-center text-xs font-bold flex items-center justify-center gap-2 bg-surface/95"
+                        style="border: 1px solid ${theme.border}; color: ${theme.accent};"
+                      >
+                        <i class="ph ph-arrows-clockwise text-sm"></i>
+                        <span>اضغط لقلب البطاقة وعرض الإجابة</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- BACK FACE -->
+                  <div
+                    class="flip-face flip-back flex flex-col justify-between"
+                    style="background-color: ${theme.backBg}; border: 2px solid ${theme.accent};"
+                  >
+                    <!-- Colored Header Band -->
+                    <div
+                      class="px-5 py-3 flex flex-wrap items-center justify-between gap-2 text-surface shrink-0"
+                      style="background-color: ${theme.accent};"
+                    >
+                      <span class="inline-flex items-center gap-1.5 text-xs font-bold">
+                        <i class="ph ph-seal-check text-base"></i>
+                        <span>الإجابة النموذجية — ${theme.label}</span>
+                      </span>
+                      <span class="text-[11px] font-medium opacity-95">${card.subtitle}</span>
+                    </div>
+
+                    ${buildMoroccanWatermarkSvg(`deck-back-geo-${card.id}`, theme.accent, '0.045')}
+
+                    <div class="relative z-10 p-5 sm:p-6 flex-1 flex flex-col justify-between gap-4">
+                      <!-- Crisp Answer Plaque -->
+                      <div
+                        class="bg-surface rounded-2xl p-5 text-center shadow-calm my-auto"
+                        style="border: 1.5px solid ${theme.border};"
+                      >
+                        <div class="text-xs font-semibold mb-1.5" style="color: ${theme.darkText};">${card.front}</div>
+                        <div class="font-serifAr text-2xl sm:text-3xl font-bold text-ink leading-relaxed">
+                          ${card.back}
+                        </div>
+                      </div>
+
+                      <!-- Contextual Note -->
+                      <div
+                        class="bg-surface/95 rounded-xl p-3.5 text-right flex items-start gap-2.5"
+                        style="border: 1px solid ${theme.border}; border-right: 4px solid ${theme.accent};"
+                      >
+                        <i class="ph ph-info text-base mt-0.5 shrink-0" style="color: ${theme.accent};"></i>
+                        <div class="space-y-0.5">
+                          <span class="text-[11px] font-bold block" style="color: ${theme.darkText};">التوضيح والسياق</span>
+                          <p class="text-xs sm:text-sm text-bodyInk leading-relaxed">${card.note}</p>
+                        </div>
+                      </div>
+
+                      <!-- Flip Back Hint -->
+                      <div class="text-center text-[11px] font-semibold flex items-center justify-center gap-1.5" style="color: ${theme.darkText};">
+                        <i class="ph ph-arrow-u-up-left text-xs"></i>
+                        <span>اضغط للعودة إلى وجه البطاقة</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls Card: Self-Evaluation, Navigation, Shuffle, Progress Bar & Colored Dots -->
+          <div class="bg-surface border border-borderWarm rounded-2xl p-4 shadow-calm space-y-4">
+            <!-- Self Assessment Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button
+                onclick="markFlashcard('${card.id}', 'known')"
+                class="py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold border transition-colors min-h-[48px] inline-flex items-center justify-center gap-2 ${
+                  cardStatus === 'known'
+                    ? 'bg-success text-surface border-success'
+                    : 'bg-successSoft text-success border-success/25 hover:bg-success hover:text-surface'
+                }"
+              >
+                <i class="ph ph-check-circle text-base"></i>
+                <span>حفظتها جيدًا</span>
+              </button>
+              <button
+                onclick="markFlashcard('${card.id}', 'review')"
+                class="py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold border transition-colors min-h-[48px] inline-flex items-center justify-center gap-2 ${
+                  cardStatus === 'review'
+                    ? 'bg-amberAccent text-surface border-amberAccent'
+                    : 'bg-amberSoft text-amberAccent border-amberAccent/30 hover:bg-amberAccent hover:text-surface'
+                }"
+              >
+                <i class="ph ph-clock-counter-clockwise text-base"></i>
+                <span>للمراجعة لاحقًا</span>
+              </button>
+            </div>
+
+            <!-- Previous / Shuffle / Next Row -->
+            <div class="flex items-center justify-between gap-2 pt-3 border-t border-borderWarm/70">
+              <button
+                onclick="stepFlashcard(-1)"
+                class="px-4 py-2.5 rounded-xl bg-paper border border-borderWarm text-xs font-semibold text-ink hover:border-accent/40 min-h-[44px] inline-flex items-center gap-1.5"
+              >
+                <i class="ph ph-arrow-right text-sm"></i>
+                <span>السابقة</span>
+              </button>
+
+              <button
+                onclick="shuffleFlashcards()"
+                class="px-3.5 py-2.5 rounded-xl bg-paper border border-borderWarm text-xs font-semibold text-slateCalm hover:text-accent hover:border-accent/40 min-h-[44px] inline-flex items-center gap-1.5 transition-colors"
+                title="خلط ترتيب البطاقات"
+              >
+                <i class="ph ph-shuffle text-sm"></i>
+                <span>خلط البطاقات</span>
+              </button>
+
+              <button
+                onclick="stepFlashcard(1)"
+                class="px-4 py-2.5 rounded-xl bg-paper border border-borderWarm text-xs font-semibold text-ink hover:border-accent/40 min-h-[44px] inline-flex items-center gap-1.5"
+              >
+                <span>التالية</span>
+                <i class="ph ph-arrow-left text-sm"></i>
+              </button>
+            </div>
+
+            <!-- Progress Bar & Clickable Color-Coded Pagination Dots -->
+            <div class="pt-2 space-y-2.5">
+              <div class="flex items-center justify-between text-[11px] text-slateCalm">
+                <span>تقدم الإتقان الكلي</span>
+                <span class="font-bold tabular-nums" style="color: ${theme.accent};">${masteredPct}%</span>
+              </div>
+              <div class="w-full h-1.5 bg-borderWarm/70 rounded-full overflow-hidden">
+                <div class="h-full rounded-full transition-all duration-300" style="width: ${masteredPct}%; background-color: ${theme.accent};"></div>
+              </div>
+
+              <!-- Clickable Color-Coded Dots -->
+              <div class="flex flex-wrap items-center justify-center gap-1.5 pt-1" role="tablist" aria-label="الانتقال السريع بين البطاقات">
+                ${cards.map((c, idx) => {
+                  const cTheme = FLASHCARD_THEMES[c.theme] || FLASHCARD_THEMES.synonym;
+                  const isCurrent = idx === uiState.flashcardIndex;
+                  const cStatus = state.flashcardStatus[c.id];
+                  const dotColor = cStatus === 'known' ? '#15803D' : cTheme.accent;
+                  return `
+                    <button
+                      onclick="jumpToFlashcard(${idx})"
+                      aria-label="الانتقال إلى البطاقة ${idx + 1}"
+                      title="${c.front}"
+                      class="rounded-full transition-all"
+                      style="
+                        width: ${isCurrent ? '24px' : '10px'};
+                        height: 10px;
+                        background-color: ${dotColor};
+                        opacity: ${isCurrent ? '1' : cStatus === 'known' ? '0.88' : '0.34'};
+                        box-shadow: ${cStatus === 'review' ? '0 0 0 2px #FAF7F0, 0 0 0 3.5px #B45309' : 'none'};
+                      "
+                    ></button>
+                  `;
+                }).join('')}
+              </div>
+
+              <p class="text-[11px] text-center text-slateCalm hidden sm:block pt-0.5">
+                اختصارات لوحة المفاتيح: المسافة لقلب البطاقة • الأسهم للتنقل يمينًا ويسارًا
+              </p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    /* ==================== MODE B: COLORFUL 3D FLIP GRID VIEW ==================== */
+    function renderColoredGridMode(cards) {
+      return `
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          ${cards.map((card, idx) => {
+            const theme = FLASHCARD_THEMES[card.theme] || FLASHCARD_THEMES.synonym;
+            const isFlipped = !!uiState.flippedGridCards[card.id];
+            const cardStatus = state.flashcardStatus[card.id];
+
+            return `
+              <div class="flip-scene">
+                <div id="grid-flip-lift-${card.id}" class="flip-lift-wrap">
+                  <article
+                    id="grid-flip-card-${card.id}"
+                    onclick="flipGridCard('${card.id}')"
+                    role="button"
+                    tabindex="0"
+                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();flipGridCard('${card.id}');}"
+                    aria-label="اضغط لقلب بطاقة ${card.front}"
+                    class="flip-card grid-flip-card shadow-calm hover:shadow-calmHover ${isFlipped ? 'is-flipped' : ''}"
+                  >
+                    <!-- GRID CARD FRONT FACE -->
+                    <div
+                      class="flip-face flip-front flex flex-col justify-between"
+                      style="background-color: ${theme.bg}; border: 1.5px solid ${theme.border};"
+                    >
+                      <!-- Colored Top Strip -->
+                      <div class="h-1.5 w-full shrink-0" style="background-color: ${theme.accent};"></div>
+                      ${buildMoroccanCornerStar(theme.accent, 'bottom-2 left-2', '0.10')}
+
+                      <div class="relative z-10 p-4 flex-1 flex flex-col justify-between gap-3">
+                        <div class="flex items-center justify-between gap-2">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold text-surface"
+                            style="background-color: ${theme.accent};"
+                          >
+                            <i class="ph ${theme.icon} text-xs"></i>
+                            <span>${theme.label}</span>
+                          </span>
+                          <div class="flex items-center gap-1.5">
+                            <span id="grid-status-badge-${card.id}">
+                              ${renderGridStatusIcon(cardStatus)}
+                            </span>
+                            <span
+                              class="text-[11px] font-bold px-2 py-0.5 rounded-md bg-surface"
+                              style="border: 1px solid ${theme.border}; color: ${theme.darkText};"
+                            >
+                              ${toArabicDigits(idx + 1)}
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="text-center py-3 space-y-1.5">
+                          <h3 class="font-heading text-xl font-bold text-ink leading-snug">${card.front}</h3>
+                          <div class="text-[11px] font-medium" style="color: ${theme.darkText};">${card.subtitle}</div>
+                        </div>
+
+                        <div
+                          class="rounded-xl py-2 px-3 bg-surface/95 flex items-center justify-center gap-1.5 text-xs font-bold"
+                          style="border: 1px solid ${theme.border}; color: ${theme.accent};"
+                        >
+                          <i class="ph ph-arrows-clockwise text-sm"></i>
+                          <span>اضغط لقلب البطاقة</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- GRID CARD BACK FACE -->
+                    <div
+                      class="flip-face flip-back flex flex-col justify-between"
+                      style="background-color: ${theme.backBg}; border: 2px solid ${theme.accent};"
+                    >
+                      <!-- Solid Header Strip -->
+                      <div
+                        class="px-4 py-2 flex items-center justify-between gap-2 text-surface shrink-0"
+                        style="background-color: ${theme.accent};"
+                      >
+                        <span class="text-[11px] font-bold inline-flex items-center gap-1">
+                          <i class="ph ph-seal-check text-xs"></i>
+                          <span>${theme.label}</span>
+                        </span>
+                        <span class="text-[10px] opacity-95">اضغط للعودة</span>
+                      </div>
+
+                      <div class="relative z-10 p-3.5 flex-1 flex flex-col justify-between gap-2.5">
+                        <!-- White Answer Plaque -->
+                        <div class="bg-surface rounded-xl p-3 text-center" style="border: 1px solid ${theme.border};">
+                          <div class="font-serifAr text-lg font-bold text-ink leading-relaxed">${card.back}</div>
+                        </div>
+
+                        <!-- Note Box -->
+                        <p
+                          class="text-xs text-bodyInk leading-relaxed bg-surface/90 rounded-lg p-2.5"
+                          style="border: 1px solid ${theme.border}; border-right: 3px solid ${theme.accent};"
+                        >
+                          ${card.note}
+                        </p>
+
+                        <!-- Quick Status Buttons -->
+                        <div class="grid grid-cols-2 gap-2 pt-0.5" onclick="event.stopPropagation()">
+                          <button
+                            id="grid-btn-known-${card.id}"
+                            onclick="markGridFlashcard('${card.id}', 'known')"
+                            class="py-2 px-2 rounded-xl text-xs font-semibold border transition-colors min-h-[38px] inline-flex items-center justify-center gap-1 ${
+                              cardStatus === 'known'
+                                ? 'bg-success text-surface border-success'
+                                : 'bg-surface text-success border-success/30 hover:bg-successSoft'
+                            }"
+                          >
+                            <i class="ph ph-check text-xs"></i>
+                            <span>حفظتها</span>
+                          </button>
+                          <button
+                            id="grid-btn-review-${card.id}"
+                            onclick="markGridFlashcard('${card.id}', 'review')"
+                            class="py-2 px-2 rounded-xl text-xs font-semibold border transition-colors min-h-[38px] inline-flex items-center justify-center gap-1 ${
+                              cardStatus === 'review'
+                                ? 'bg-amberAccent text-surface border-amberAccent'
+                                : 'bg-surface text-amberAccent border-amberAccent/35 hover:bg-amberSoft'
+                            }"
+                          >
+                            <i class="ph ph-clock-counter-clockwise text-xs"></i>
+                            <span>للمراجعة</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+    }
+
+    function renderGridStatusIcon(cardStatus) {
+      if (cardStatus === 'known') {
+        return `<span class="w-6 h-6 rounded-full bg-successSoft text-success border border-success/25 inline-flex items-center justify-center" title="محفوظة"><i class="ph ph-check text-xs"></i></span>`;
+      }
+      if (cardStatus === 'review') {
+        return `<span class="w-6 h-6 rounded-full bg-amberSoft text-amberAccent border border-amberAccent/30 inline-flex items-center justify-center" title="للمراجعة"><i class="ph ph-clock-counter-clockwise text-xs"></i></span>`;
+      }
+      return '';
+    }
+
+    function renderBookmarksPanel(savedIds) {
+      if (savedIds.length === 0) {
+        return `
+          <div class="bg-surface border border-borderWarm rounded-2xl p-8 text-center space-y-3 shadow-calm">
+            <div class="w-12 h-12 mx-auto rounded-2xl bg-amberSoft text-amberAccent flex items-center justify-center">
+              <i class="ph ph-bookmark-simple text-2xl"></i>
+            </div>
+            <h3 class="font-heading text-2xl font-bold text-ink">لا توجد أسئلة محفوظة حاليًا</h3>
+            <p class="text-xs sm:text-sm text-slateCalm max-w-md mx-auto leading-relaxed">
+              أثناء المذاكرة داخل المحطات، يمكنك الضغط على أيقونة الحفظ أو اختيار «أحتاج مراجعتها» في الأسئلة المقالية لتظهر هنا تلقائيًا.
+            </p>
+            <button onclick="switchView('station')" class="px-5 py-2.5 rounded-xl bg-accent text-surface text-xs sm:text-sm font-semibold min-h-[44px]">
+              الذهاب إلى المحطات
+            </button>
+          </div>
+        `;
+      }
+
+      const items = savedIds.map(id => ALL_QUESTIONS.find(q => q.id === id)).filter(Boolean);
+
+      return `
+        <div class="space-y-3.5">
+          ${items.map(q => `
+            <article class="bg-surface border border-borderWarm rounded-2xl p-4 sm:p-5 shadow-calm space-y-3">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <span class="inline-block px-2.5 py-0.5 rounded-md bg-accentSoft text-accent text-[11px] font-semibold mb-1">
+                    المحطة ${toArabicDigits(q.stationId)}: ${q.stationTitle}
+                  </span>
+                  <h3 class="text-sm sm:text-base font-bold text-ink leading-relaxed">${q.prompt}</h3>
+                </div>
+              </div>
+
+              <div class="bg-paper border border-borderWarm rounded-xl p-3.5 text-xs sm:text-sm space-y-1">
+                ${q.type === 'mcq' ? `
+                  <div class="font-bold text-success">الإجابة الصحيحة: ${q.options[q.correctIndex]}</div>
+                  <p class="text-slateCalm leading-relaxed">${q.explanation}</p>
+                ` : `
+                  <div class="font-bold text-accent">الإجابة النموذجية:</div>
+                  <p class="text-bodyInk leading-relaxed">${q.modelAnswer}</p>
+                `}
+              </div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 pt-1">
+                <button
+                  onclick="switchView('station', { stationId: ${q.stationId}, scrollToQuestionId: '${q.id}' })"
+                  class="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:underline py-1.5"
+                >
+                  <i class="ph ph-arrow-square-out text-sm"></i>
+                  <span>فتح السؤال داخل المحطة</span>
+                </button>
+                <button
+                  onclick="removeSavedQuestion('${q.id}')"
+                  class="inline-flex items-center gap-1 text-xs font-semibold text-slateCalm hover:text-success py-1.5 px-2.5 rounded-lg hover:bg-successSoft transition-colors"
+                >
+                  <i class="ph ph-check text-sm"></i>
+                  <span>تمت المراجعة (إزالة)</span>
+                </button>
+              </div>
+            </article>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    /* ==================== FLASHCARD DOM-NATIVE 3D FLIP INTERACTIONS ==================== */
+    function setReviewSubTab(tab) {
+      uiState.reviewSubTab = tab;
+      renderApp();
+    }
+
+    function setFlashcardMode(mode) {
+      uiState.flashcardMode = mode;
+      renderApp();
+    }
+
+    function setFlashcardFilter(filterKey) {
+      uiState.flashcardFilter = filterKey;
+      uiState.flashcardIndex = 0;
+      uiState.flashcardFlipped = false;
+      renderApp();
+    }
+
+    /* Direct DOM toggle for Deck Card so 3D flip + sheen sweep animate seamlessly */
+    function flipCurrentCard() {
+      if (uiState.justSwiped || uiState.deckTransitionLock) return;
+      uiState.flashcardFlipped = !uiState.flashcardFlipped;
+      playFlipSound();
+
+      const cardEl = document.getElementById('deck-flip-card');
+      const liftEl = document.getElementById('deck-flip-lift');
+      const stackWrapper = document.getElementById('deck-stack-wrapper');
+
+      if (cardEl) {
+        cardEl.classList.toggle('is-flipped', uiState.flashcardFlipped);
+      }
+      if (liftEl) {
+        liftEl.classList.remove('is-lifting');
+        void liftEl.offsetWidth;
+        liftEl.classList.add('is-lifting');
+      }
+      if (stackWrapper) {
+        stackWrapper.classList.add('deck-nudge');
+        clearTimeout(stackWrapper._nudgeTimer);
+        stackWrapper._nudgeTimer = setTimeout(() => {
+          stackWrapper.classList.remove('deck-nudge');
+        }, 420);
+      }
+    }
+
+    /* Directional Slide Transition for Next / Previous Card */
+    function stepFlashcard(delta) {
+      const cards = getFilteredFlashcards();
+      if (cards.length <= 1 || uiState.deckTransitionLock) return;
+
+      uiState.deckTransitionLock = true;
+      playFlipSound();
+
+      const stage = document.getElementById('deck-active-stage');
+      const outClass = delta > 0 ? 'anim-slide-out-next' : 'anim-slide-out-prev';
+      const inClass = delta > 0 ? 'anim-slide-in-next' : 'anim-slide-in-prev';
+
+      if (stage) {
+        stage.classList.add(outClass);
+        setTimeout(() => {
+          uiState.flashcardIndex = (uiState.flashcardIndex + delta + cards.length) % cards.length;
+          uiState.flashcardFlipped = false;
+          uiState.deckEnterAnim = inClass;
+          uiState.deckTransitionLock = false;
+          renderApp();
+        }, 165);
+      } else {
+        uiState.flashcardIndex = (uiState.flashcardIndex + delta + cards.length) % cards.length;
+        uiState.flashcardFlipped = false;
+        uiState.deckTransitionLock = false;
+        renderApp();
+      }
+    }
+
+    function jumpToFlashcard(idx) {
+      if (idx === uiState.flashcardIndex || uiState.deckTransitionLock) return;
+      const delta = idx > uiState.flashcardIndex ? 1 : -1;
+      uiState.deckEnterAnim = delta > 0 ? 'anim-slide-in-next' : 'anim-slide-in-prev';
+      uiState.flashcardIndex = idx;
+      uiState.flashcardFlipped = false;
+      playFlipSound();
+      renderApp();
+    }
+
+    function shuffleFlashcards() {
+      const arr = [...uiState.flashcardOrder];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      uiState.flashcardOrder = arr;
+      uiState.flashcardIndex = 0;
+      uiState.flashcardFlipped = false;
+      uiState.deckEnterAnim = 'anim-slide-in-next';
+      playFlipSound();
+      renderApp();
+      showToast('تم خلط ترتيب البطاقات بنجاح', 'ph-shuffle');
+    }
+
+    function markFlashcard(cardId, status) {
+      state.flashcardStatus[cardId] = status;
+      if (status === 'known') playCorrectSound();
+      else playFlipSound();
+      saveState();
+
+      const cards = getFilteredFlashcards();
+      if (cards.length > 0) {
+        uiState.flashcardIndex = (uiState.flashcardIndex + 1) % cards.length;
+      }
+      uiState.flashcardFlipped = false;
+      uiState.deckEnterAnim = 'anim-slide-in-next';
+      renderApp();
+    }
+
+    /* Direct DOM toggle for Individual Grid Card so 3D flip plays smoothly */
+    function flipGridCard(cardId) {
+      uiState.flippedGridCards[cardId] = !uiState.flippedGridCards[cardId];
+      playFlipSound();
+
+      const cardEl = document.getElementById(`grid-flip-card-${cardId}`);
+      const liftEl = document.getElementById(`grid-flip-lift-${cardId}`);
+      if (cardEl) {
+        cardEl.classList.toggle('is-flipped', uiState.flippedGridCards[cardId]);
+      }
+      if (liftEl) {
+        liftEl.classList.remove('is-lifting');
+        void liftEl.offsetWidth;
+        liftEl.classList.add('is-lifting');
+      }
+
+      const btn = document.getElementById('grid-flip-all-btn');
+      if (btn) {
+        const allFlipped = areAllGridCardsFlipped(getFilteredFlashcards());
+        btn.innerHTML = `<i class="ph ph-arrows-clockwise text-sm"></i><span>${allFlipped ? 'إعادة كل البطاقات' : 'قلب كل البطاقات'}</span>`;
+      }
+    }
+
+    function areAllGridCardsFlipped(cards) {
+      return cards.length > 0 && cards.every(c => !!uiState.flippedGridCards[c.id]);
+    }
+
+    function toggleAllGridCards() {
+      const cards = getFilteredFlashcards();
+      const shouldUnflip = areAllGridCardsFlipped(cards);
+      playFlipSound();
+
+      cards.forEach((c, idx) => {
+        uiState.flippedGridCards[c.id] = !shouldUnflip;
+        const cardEl = document.getElementById(`grid-flip-card-${c.id}`);
+        if (cardEl) {
+          setTimeout(() => {
+            cardEl.classList.toggle('is-flipped', !shouldUnflip);
+          }, Math.min(idx * 25, 220));
+        }
+      });
+
+      const btn = document.getElementById('grid-flip-all-btn');
+      if (btn) {
+        btn.innerHTML = `<i class="ph ph-arrows-clockwise text-sm"></i><span>${!shouldUnflip ? 'إعادة كل البطاقات' : 'قلب كل البطاقات'}</span>`;
+      }
+    }
+
+    function markGridFlashcard(cardId, status) {
+      state.flashcardStatus[cardId] = status;
+      if (status === 'known') {
+        playCorrectSound();
+        showToast('أحسنت — تم حفظ البطاقة', 'ph-check-circle');
+      } else {
+        showToast('أضيفت البطاقة لقائمة المراجعة', 'ph-clock-counter-clockwise');
+      }
+      saveState();
+
+      if (uiState.flashcardFilter === 'review') {
+        renderApp();
+        return;
+      }
+
+      const badgeEl = document.getElementById(`grid-status-badge-${cardId}`);
+      if (badgeEl) badgeEl.innerHTML = renderGridStatusIcon(status);
+
+      const knownBtn = document.getElementById(`grid-btn-known-${cardId}`);
+      const reviewBtn = document.getElementById(`grid-btn-review-${cardId}`);
+      if (knownBtn) {
+        knownBtn.className = `py-2 px-2 rounded-xl text-xs font-semibold border transition-colors min-h-[38px] inline-flex items-center justify-center gap-1 ${
+          status === 'known'
+            ? 'bg-success text-surface border-success'
+            : 'bg-surface text-success border-success/30 hover:bg-successSoft'
+        }`;
+      }
+      if (reviewBtn) {
+        reviewBtn.className = `py-2 px-2 rounded-xl text-xs font-semibold border transition-colors min-h-[38px] inline-flex items-center justify-center gap-1 ${
+          status === 'review'
+            ? 'bg-amberAccent text-surface border-amberAccent'
+            : 'bg-surface text-amberAccent border-amberAccent/35 hover:bg-amberSoft'
+        }`;
+      }
+
+      const summaryEl = document.getElementById('fc-mastery-summary');
+      if (summaryEl) {
+        const knownCount = FLASHCARDS.filter(c => state.flashcardStatus[c.id] === 'known').length;
+        const reviewCount = FLASHCARDS.filter(c => state.flashcardStatus[c.id] === 'review').length;
+        summaryEl.innerHTML = `حفظت <strong class="text-success">${toArabicDigits(knownCount)}</strong> من ${toArabicDigits(FLASHCARDS.length)} بطاقة${
+          reviewCount > 0 ? ` • <strong class="text-amberAccent">${toArabicDigits(reviewCount)}</strong> للمراجعة` : ''
+        }`;
+      }
+    }
+
+    /* Touch Swipe Support for Mobile Deck */
+    function handleDeckTouchStart(e) {
+      if (!e.touches || e.touches.length !== 1) return;
+      uiState.touchStartX = e.touches[0].clientX;
+      uiState.touchStartY = e.touches[0].clientY;
+    }
+
+    function handleDeckTouchEnd(e) {
+      if (!e.changedTouches || e.changedTouches.length !== 1) return;
+      const dx = e.changedTouches[0].clientX - uiState.touchStartX;
+      const dy = e.changedTouches[0].clientY - uiState.touchStartY;
+
+      if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.25) {
+        uiState.justSwiped = true;
+        setTimeout(() => { uiState.justSwiped = false; }, 260);
+        if (dx < 0) stepFlashcard(1);
+        else stepFlashcard(-1);
+      }
+    }
+
+    /* Keyboard Shortcuts for Flashcards Deck */
+    document.addEventListener('keydown', (e) => {
+      const tag = e.target && e.target.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+
+      const isDeckActive =
+        state.currentView === 'review' &&
+        uiState.reviewSubTab === 'flashcards' &&
+        uiState.flashcardMode === 'flip';
+
+      if (!isDeckActive) return;
+
+      if (e.key === ' ' || (e.key === 'Enter' && tag !== 'BUTTON')) {
+        e.preventDefault();
+        flipCurrentCard();
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        stepFlashcard(1);
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        stepFlashcard(-1);
+      }
+    });
+
+    function removeSavedQuestion(qId) {
+      state.bookmarks = state.bookmarks.filter(id => id !== qId);
+      if (state.essayStatus[qId] === 'review') {
+        state.essayStatus[qId] = 'known';
+      }
+      saveState();
+      renderApp();
+      showToast('تمت إزالة السؤال من قائمة المراجعة', 'ph-check-circle');
+    }
+
+    /* =========================================================================
+       10. MASTER RENDER & UTILITIES
+       ========================================================================= */
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function renderApp() {
+      const root = document.getElementById('app-root');
+      if (!root) return;
+
+      try {
+        if (state.currentView === 'plan') {
+          root.innerHTML = renderPlanView();
+        } else if (state.currentView === 'station') {
+          root.innerHTML = renderStationView();
+        } else if (state.currentView === 'quiz') {
+          root.innerHTML = renderQuizView();
+        } else if (state.currentView === 'review') {
+          root.innerHTML = renderReviewView();
+        }
+        updateGlobalChrome();
+      } catch (err) {
+        root.innerHTML = `
+          <div class="bg-dangerSoft border border-danger/30 rounded-2xl p-6 text-center space-y-2">
+            <div class="font-bold text-danger">حدث خطأ غير متوقع أثناء عرض الصفحة</div>
+            <button onclick="switchView('plan')" class="px-4 py-2 rounded-xl bg-accent text-surface text-xs font-semibold">العودة للرئيسية</button>
+          </div>
+        `;
+      }
+    }
+
+    // Initialize Application
+    window.addEventListener('DOMContentLoaded', () => {
+      renderApp();
+    });
+  </script>
+</body>
+</html>
